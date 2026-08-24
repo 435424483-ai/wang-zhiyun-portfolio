@@ -1053,7 +1053,8 @@ h3 {
 
 .case-xiayu-studio .lead-gallery {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  align-items: start;
+  gap: 20px;
 }
 
 .case-xiayu-studio .lead-gallery .work-card,
@@ -1072,11 +1073,13 @@ h3 {
 
 .case-xiayu-studio .lead-gallery .work-e1 .work-image img,
 .case-xiayu-studio .lead-gallery .work-e3 .work-image img {
-  max-height: 310px;
+  height: 230px;
+  max-height: none;
+  object-fit: cover;
 }
 
 .case-xiayu-studio .lead-gallery .work-e8 .work-image img {
-  max-height: min(58vh, 620px);
+  max-height: min(62vh, 700px);
 }
 
 .case-xiayu-studio .lead-gallery .work-e1 .image-button,
@@ -1088,7 +1091,7 @@ h3 {
 .case-xiayu-studio .lead-gallery .work-e1 .work-caption,
 .case-xiayu-studio .lead-gallery .work-e3 .work-caption,
 .case-xiayu-studio .lead-gallery .work-e8 .work-caption {
-  padding: 13px 16px 15px;
+  padding: 12px 15px 14px;
 }
 
 .case-xiayu-studio .lead-gallery .work-e1 .work-caption p,
