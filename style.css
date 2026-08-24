@@ -1065,10 +1065,12 @@ h3 {
 .case-xiayu-studio .lead-gallery .work-e1,
 .case-xiayu-studio .lead-gallery .work-e3 {
   min-height: 0;
+  width: 100%;
 }
 
 .case-xiayu-studio .lead-gallery .work-e8 {
-  grid-column: 1 / -1;
+  grid-column: 1 / -1 !important;
+  width: 100%;
 }
 
 .case-xiayu-studio .lead-gallery .work-e1 .work-image img,
@@ -1079,6 +1081,7 @@ h3 {
 }
 
 .case-xiayu-studio .lead-gallery .work-e8 .work-image img {
+  width: 100%;
   max-height: min(62vh, 700px);
 }
 
