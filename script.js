@@ -10,9 +10,13 @@ const imageMeta = {
   "assets/a_people_daily/a07_practical_tech_0710.jpg": { width: 1080, height: 1920 },
   "assets/b_gulangyu/b01_minoyaki.png": { width: 3839, height: 1829 },
   "assets/b_gulangyu/b02_tile_package_mockup.png": { width: 1122, height: 1402 },
-  "assets/b_gulangyu/b03_canvas_bag_mockup.png": { width: 2048, height: 2048 },
-  "assets/b_gulangyu/b04_postcard_black_gold.png": { width: 2531, height: 1656 },
+  "assets/b_gulangyu/b03_canvas_bag_clean.png": { width: 1254, height: 1254 },
+  "assets/b_gulangyu/b04_postcard_black_gold_clean.png": { width: 1550, height: 1014 },
   "assets/b_gulangyu/b05_coin_mockup.png": { width: 1810, height: 917 },
+  "assets/b_gulangyu/b06_phone_grip.png": { width: 1122, height: 1402 },
+  "assets/b_gulangyu/b07_landmark_magic_cube.png": { width: 1448, height: 1086 },
+  "assets/b_gulangyu/b08_minoyaki_product_set.png": { width: 1448, height: 1086 },
+  "assets/b_gulangyu/b09_landmark_thermos.png": { width: 1448, height: 1086 },
   "assets/c_xmu_media/c03_media_memory_longform_01.jpg": { width: 3000, height: 5619 },
   "assets/c_xmu_media/c04_graduation_gift_cover.png": { width: 2350, height: 1000 },
   "assets/c_xmu_media/c05_calendar_body.png": { width: 4500, height: 3645 },
@@ -86,7 +90,7 @@ function visualWeight(src) {
 function leadCountForCase(caseItem, orderedImages) {
   const desired = {
     "people-daily": 2,
-    gulangyu: 2,
+    gulangyu: 3,
     "xmu-media": 2,
     "human-museum": 3,
     "xiayu-studio": 3,
@@ -98,6 +102,7 @@ function leadCountForCase(caseItem, orderedImages) {
 function featureIdsForCase(caseItem) {
   const featured = {
     "people-daily": ["A4", "A5", "A6", "A7"],
+    gulangyu: ["B7", "B8", "B9", "B3", "B4", "B5"],
     "xiayu-studio": ["E2", "E4", "E5", "E6", "E27", "E28"],
     "xiayu-campus": []
   };
@@ -113,7 +118,8 @@ function carouselIdsForCase(caseItem) {
 
 function featureRowsForCase(caseItem, featuredImages) {
   const rows = {
-    "xiayu-studio": [["E2", "E4"], ["E5", "E6"], ["E27", "E28"]]
+    "xiayu-studio": [["E2", "E4"], ["E5", "E6"], ["E27", "E28"]],
+    gulangyu: [["B7", "B8"], ["B9", "B3"], ["B4", "B5"]]
   };
   const definedRows = rows[caseItem.id];
   if (!definedRows) return [featuredImages];
@@ -205,7 +211,7 @@ function renderCase(caseItem, index) {
     <figure class="work-card work-${image.id.toLowerCase()} ${image.detailLevel === "main" ? "main" : ""} ${imageKind(image.src)} reveal">
       <div class="work-image">
         <button class="image-button" type="button" data-full="${image.src}" data-title="${image.id} ${image.title}">
-          <img src="${image.src}" alt="${image.title}" loading="lazy" />
+          <img src="${image.src}" alt="${image.title}" loading="eager" />
         </button>
       </div>
       <figcaption class="work-caption">
@@ -226,7 +232,7 @@ function renderCase(caseItem, index) {
         (image) => `
           <figure class="evidence-photo ${imageKind(image.src)}">
             <button class="image-button evidence-image-button" type="button" data-full="${image.src}" data-title="${image.id} ${image.title}">
-              <img src="${image.src}" alt="${image.title}" loading="lazy" />
+              <img src="${image.src}" alt="${image.title}" loading="eager" />
             </button>
             <figcaption>
               <strong>${image.title}</strong>
@@ -286,7 +292,7 @@ function renderCase(caseItem, index) {
                   (image) => `
                     <figure class="evidence-photo ${imageKind(image.src)}">
                       <button class="image-button evidence-image-button" type="button" data-full="${image.src}" data-title="${image.id} ${image.title}">
-                        <img src="${image.src}" alt="${image.title}" loading="lazy" />
+                        <img src="${image.src}" alt="${image.title}" loading="eager" />
                       </button>
                       <figcaption>
                         <strong>${image.title}</strong>

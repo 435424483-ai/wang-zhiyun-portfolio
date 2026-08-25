@@ -225,11 +225,15 @@ const portfolioCases = [
     ],
     results: ["10 余款产品已实现批量生产。", "相关产品作为首批文创商品在两处新场馆及新文创店投入销售。"],
     images: [
-      { id: "B1", title: "鼓浪屿美浓烧", src: "assets/b_gulangyu/b01_minoyaki.png", detailLevel: "main", note: "可作为产品系统主视觉。" },
-      { id: "B2", title: "瓷砖包装样机", src: "assets/b_gulangyu/b02_tile_package_mockup.png", detailLevel: "main", note: "展示从图案到包装、产品呈现的落地感。" },
-      { id: "B3", title: "建筑插画帆布包样机", src: "assets/b_gulangyu/b03_canvas_bag_mockup.png", detailLevel: "support", note: "作为产品延展图。" },
-      { id: "B4", title: "黑金明信片样机", src: "assets/b_gulangyu/b04_postcard_black_gold.png", detailLevel: "support", note: "展示系列化周边。" },
-      { id: "B5", title: "英美领事馆纪念币样机", src: "assets/b_gulangyu/b05_coin_mockup.png", detailLevel: "support", note: "作为产品品类补充。" }
+      { id: "B1", title: "美浓烧冰箱贴系列主视觉", src: "assets/b_gulangyu/b01_minoyaki.png", detailLevel: "main", note: "提炼鼓浪屿建筑元素，建立系列视觉基调。" },
+      { id: "B2", title: "美浓烧冰箱贴包装", src: "assets/b_gulangyu/b02_tile_package_mockup.png", detailLevel: "main", note: "同款产品的包装与尺寸方案。" },
+      { id: "B6", title: "美浓烧冰箱贴成品", src: "assets/b_gulangyu/b08_minoyaki_product_set.png", detailLevel: "main", note: "以成品组合呈现同款产品系统。" },
+      { id: "B7", title: "鼓浪屿三层旋转手机支架", src: "assets/b_gulangyu/b06_phone_grip.png", detailLevel: "support", note: "将八卦楼与海岛景观转化为可互动产品。" },
+      { id: "B8", title: "鼓浪屿地标魔方", src: "assets/b_gulangyu/b07_landmark_magic_cube.png", detailLevel: "support", note: "用六面结构串联岛屿地标。" },
+      { id: "B9", title: "厦门地标保温杯系列", src: "assets/b_gulangyu/b09_landmark_thermos.png", detailLevel: "support", note: "面向日常使用的地标图形延展。" },
+      { id: "B3", title: "建筑插画帆布包", src: "assets/b_gulangyu/b03_canvas_bag_clean.png", detailLevel: "support", note: "以场馆建筑形成实用周边延展。" },
+      { id: "B4", title: "黑金明信片", src: "assets/b_gulangyu/b04_postcard_black_gold_clean.png", detailLevel: "support", note: "以金线描绘建筑细节。" },
+      { id: "B5", title: "英美领事馆纪念币", src: "assets/b_gulangyu/b05_coin_mockup.png", detailLevel: "support", note: "场馆建筑的纪念性产品转化。" }
     ]
   },
   {

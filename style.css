@@ -1047,6 +1047,46 @@ h3 {
   max-height: 640px;
 }
 
+.case-gulangyu .lead-gallery {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.case-gulangyu .lead-gallery .work-card,
+.case-gulangyu .lead-gallery .work-card.main {
+  grid-column: auto;
+  width: 100%;
+}
+
+.case-gulangyu .lead-gallery .work-b6 {
+  grid-column: 1 / -1 !important;
+}
+
+.case-gulangyu .lead-gallery .work-b1 .work-image img,
+.case-gulangyu .lead-gallery .work-b2 .work-image img {
+  height: 360px;
+  max-height: none;
+  object-fit: contain;
+}
+
+.case-gulangyu .lead-gallery .work-b6 .work-image img {
+  width: 100%;
+  max-height: min(58vh, 560px);
+}
+
+.case-gulangyu .feature-row {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.case-gulangyu .feature-row .work-card {
+  grid-column: auto !important;
+  width: 100%;
+}
+
+.case-gulangyu .feature-row .work-image img {
+  max-height: 420px;
+}
+
 .case-xiayu-studio .feature-row {
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
