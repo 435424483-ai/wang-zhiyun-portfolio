@@ -1110,7 +1110,8 @@ h3 {
 .case-xiayu-studio .feature-row .work-e10,
 .case-xiayu-studio .feature-row .work-e27,
 .case-xiayu-studio .feature-row .work-e28 {
-  grid-column: span 6;
+  grid-column: span 6 !important;
+  width: 100%;
 }
 
 .case-xiayu-studio .work-e2 .work-image img,

@@ -111,6 +111,18 @@ function carouselIdsForCase(caseItem) {
   return carousel[caseItem.id] || [];
 }
 
+function featureRowsForCase(caseItem, featuredImages) {
+  const rows = {
+    "xiayu-studio": [["E2", "E4"], ["E5", "E6"], ["E27", "E28"], ["E10"]]
+  };
+  const definedRows = rows[caseItem.id];
+  if (!definedRows) return [featuredImages];
+
+  return definedRows
+    .map((ids) => ids.map((id) => featuredImages.find((image) => image.id === id)).filter(Boolean))
+    .filter((row) => row.length);
+}
+
 function setProfile() {
   document.title = `${portfolioProfile.name} | 视觉传播作品集`;
   byId("hero-title").textContent = portfolioProfile.headline;
@@ -290,15 +302,17 @@ function renderCase(caseItem, index) {
       .join("");
 
   const leadImageHtml = leadImages.map(renderImageCard).join("");
-  const featuredFollowHtml = featuredFollowImages.map(renderImageCard).join("");
+  const featuredRowsHtml = featureRowsForCase(caseItem, featuredFollowImages)
+    .map((row) => `<div class="feature-row">${row.map(renderImageCard).join("")}</div>`)
+    .join("");
   const carouselHtml = carouselImages.map(renderImageCard).join("");
   const leftFollowHtml = balancedColumns.left.map(renderImageCard).join("");
   const rightFollowHtml = balancedColumns.right.map(renderImageCard).join("");
   const sideEvidenceHtml = renderSideEvidence();
-  const hasFollowImages = featuredFollowHtml || carouselHtml || leftFollowHtml || rightFollowHtml;
+  const hasFollowImages = featuredRowsHtml || carouselHtml || leftFollowHtml || rightFollowHtml;
   const followImageHtml = hasFollowImages
     ? `
-      ${featuredFollowHtml ? `<div class="feature-row">${featuredFollowHtml}</div>` : ""}
+      ${featuredRowsHtml}
       ${carouselHtml ? `<div class="carousel-row" aria-label="系列作品横向浏览">${carouselHtml}</div>` : ""}
       <div class="gallery-column">${leftFollowHtml}</div>
       <div class="gallery-column">${rightFollowHtml}</div>
