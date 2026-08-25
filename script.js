@@ -98,7 +98,7 @@ function leadCountForCase(caseItem, orderedImages) {
 function featureIdsForCase(caseItem) {
   const featured = {
     "people-daily": ["A4", "A5", "A6", "A7"],
-    "xiayu-studio": ["E2", "E4", "E5", "E6", "E27", "E28", "E10"],
+    "xiayu-studio": ["E2", "E4", "E5", "E6", "E27", "E28"],
     "xiayu-campus": ["E16"]
   };
   return featured[caseItem.id] || [];
@@ -113,7 +113,7 @@ function carouselIdsForCase(caseItem) {
 
 function featureRowsForCase(caseItem, featuredImages) {
   const rows = {
-    "xiayu-studio": [["E2", "E4"], ["E5", "E6"], ["E27", "E28"], ["E10"]]
+    "xiayu-studio": [["E2", "E4"], ["E5", "E6"], ["E27", "E28"]]
   };
   const definedRows = rows[caseItem.id];
   if (!definedRows) return [featuredImages];

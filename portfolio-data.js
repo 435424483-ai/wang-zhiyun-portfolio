@@ -168,8 +168,7 @@ const portfolioCases = [
       { id: "E5", title: "市集产品墙与账号引流", src: "assets/e_xiayu_studio/e05_market_product_wall.jpg", detailLevel: "support", note: "展示产品陈列、扫码关注与销售转化场景。" },
       { id: "E6", title: "创意市集产品桌面陈列", src: "assets/e_xiayu_studio/e06_creative_market_product_table.jpg", detailLevel: "support", note: "呈现布艺产品、挂件等品类的线下销售状态。" },
       { id: "E27", title: "小红书主题内容发文：女性宣言", src: "assets/e_xiayu_studio/e27_xiaohongshu_women_statement.jpg", detailLevel: "support", note: "围绕 IP 角色与女性议题拓展内容表达。" },
-      { id: "E28", title: "小红书内容发文：妈祖日常", src: "assets/e_xiayu_studio/e28_xiaohongshu_daily_language.png", detailLevel: "support", note: "展示 MAZOO 妈祖账号中的日常化内容表达。" },
-      { id: "E10", title: "上海国际插画艺术节海报", src: "assets/e_xiayu_studio/e10_shanghai_illustration_fair_poster.jpg", detailLevel: "support", note: "用于展示插画市集及展会传播物料。" }
+      { id: "E28", title: "小红书内容发文：妈祖日常", src: "assets/e_xiayu_studio/e28_xiaohongshu_daily_language.png", detailLevel: "support", note: "展示 MAZOO 妈祖账号中的日常化内容表达。" }
     ]
   },
   {
