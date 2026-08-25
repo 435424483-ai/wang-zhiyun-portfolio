@@ -193,8 +193,8 @@ const portfolioCases = [
       "“时代之新·嘉庚精神”系列文创获厦门大学文创征集一等奖。"
     ],
     images: [
-      { id: "E14", title: "2024 级新生录取礼包发布反馈", src: "assets/e_xiayu_studio/e14_xmu_admission_package_xhs_01.jpg", detailLevel: "main", note: "小红书上 2024 级新生发布的录取通知书及礼包内容，作为校内合作成果的外部反馈。" },
-      { id: "E15", title: "录取通知书与礼包物料实拍", src: "assets/e_xiayu_studio/e15_xmu_admission_package_xhs_02.jpg", detailLevel: "main", note: "展示插画物料进入厦门大学新生录取礼包的实际使用场景。" },
+      { id: "E14", title: "2024 级新生录取礼包发布反馈", src: "assets/e_xiayu_studio/e14_xmu_admission_package_xhs_01.jpg", detailLevel: "main", note: "新生主动发布分享，获得良好反馈。" },
+      { id: "E15", title: "录取通知书与礼包物料实拍", src: "assets/e_xiayu_studio/e15_xmu_admission_package_xhs_02.jpg", detailLevel: "main", note: "录取礼包实物落地。" },
       { id: "E16", title: "时代之新·嘉庚精神系列文创", src: "assets/e_xiayu_studio/e16_jiageng_series_overview.jpg", detailLevel: "main", note: "获厦门大学文创征集一等奖，展示校园精神主题下的产品化设计能力。" },
       { id: "E19", title: "厦大精神书本设计：以德为行", src: "assets/e_xiayu_studio/e19_book_design_ethics.png", detailLevel: "support", note: "书本设计系列代表图，体现校园精神内容的视觉转译。" },
       { id: "E20", title: "厦大精神书本设计：崇教于行", src: "assets/e_xiayu_studio/e20_book_design_dedication.png", detailLevel: "support", note: "书本设计系列代表图，展示同一主题下的纹样与色彩变体。" },
