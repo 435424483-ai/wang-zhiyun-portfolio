@@ -90,7 +90,7 @@ function leadCountForCase(caseItem, orderedImages) {
     "xmu-media": 2,
     "human-museum": 3,
     "xiayu-studio": 3,
-    "xiayu-campus": 2
+    "xiayu-campus": 3
   };
   return Math.min(desired[caseItem.id] || 2, orderedImages.length);
 }
@@ -99,7 +99,7 @@ function featureIdsForCase(caseItem) {
   const featured = {
     "people-daily": ["A4", "A5", "A6", "A7"],
     "xiayu-studio": ["E2", "E4", "E5", "E6", "E27", "E28"],
-    "xiayu-campus": ["E16"]
+    "xiayu-campus": []
   };
   return featured[caseItem.id] || [];
 }

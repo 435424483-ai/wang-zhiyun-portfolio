@@ -1143,14 +1143,17 @@ h3 {
 .case-xiayu-campus .lead-gallery .work-card,
 .case-xiayu-campus .lead-gallery .work-card.main {
   grid-column: auto;
+  width: 100%;
 }
 
-.case-xiayu-campus .feature-row .work-e16 {
-  grid-column: 1 / -1;
+.case-xiayu-campus .lead-gallery .work-e16 {
+  grid-column: 1 / -1 !important;
+  width: 100%;
 }
 
-.case-xiayu-campus .feature-row .work-e16 .work-image img {
-  max-height: 520px;
+.case-xiayu-campus .lead-gallery .work-e16 .work-image img {
+  width: 100%;
+  max-height: min(62vh, 700px);
 }
 
 .case-xiayu-campus .carousel-row .work-image img {
