@@ -31,6 +31,15 @@ const imageMeta = {
   "assets/c_xmu_media/c15_20th_congress_avatar_frame.png": { width: 1216, height: 960 },
   "assets/c_xmu_media/c16_new_student_portraits.png": { width: 1216, height: 960 },
   "assets/c_xmu_media/c17_xmu_wallpapers.png": { width: 1216, height: 960 },
+  "assets/c_xmu_media/c18_travel_calendar_mockup.png": { width: 1031, height: 673 },
+  "assets/c_xmu_media/c19_travel_calendar_stop01.png": { width: 1080, height: 420 },
+  "assets/c_xmu_media/c20_travel_calendar_stop01_detail.png": { width: 1080, height: 420 },
+  "assets/c_xmu_media/c21_travel_calendar_stop07.png": { width: 1080, height: 420 },
+  "assets/c_xmu_media/c22_travel_calendar_stop07_detail.png": { width: 1080, height: 420 },
+  "assets/c_xmu_media/c23_travel_calendar_students.jpg": { width: 1080, height: 607 },
+  "assets/c_xmu_media/c24_travel_calendar_feedback.jpg": { width: 1080, height: 1440 },
+  "assets/c_xmu_media/c25_travel_calendar_library.jpg": { width: 1080, height: 1440 },
+  "assets/c_xmu_media/c26_travel_calendar_wechat_long.png": { width: 1101, height: 2048 },
   "assets/d_museum/d01_jixiang_babao.jpg": { width: 3508, height: 4961 },
   "assets/d_museum/d02_baxian_guohai_01.jpg": { width: 3508, height: 4961 },
   "assets/d_museum/d03_qiequ_wen.jpg": { width: 3508, height: 4961 },
@@ -197,6 +206,85 @@ function setProfile() {
   skillList.innerHTML = portfolioProfile.basics.skills
     .map((skill) => `<li>${skill}</li>`)
     .join("");
+}
+
+function renderTravelCalendarModule() {
+  const base = "assets/c_xmu_media/";
+  const stops = [
+    {
+      id: "stop-one",
+      label: "第一站 / 群贤楼",
+      image: `${base}c19_travel_calendar_stop01.png`,
+      detail: `${base}c20_travel_calendar_stop01_detail.png`,
+      title: "思明校区 · 群贤楼"
+    },
+    {
+      id: "stop-seven",
+      label: "第七站 / 小巨蛋",
+      image: `${base}c21_travel_calendar_stop07.png`,
+      detail: `${base}c22_travel_calendar_stop07_detail.png`,
+      title: "翔安校区 · 小巨蛋"
+    }
+  ];
+
+  return `
+    <section class="travel-calendar-module reveal" aria-label="旅行周历项目展示">
+      <div class="travel-calendar-heading">
+        <span>PROJECT EXTENSION / TRAVEL CALENDAR</span>
+        <h4>九周 · 九处地标的毕业旅行周历</h4>
+        <p>把毕业季的校园记忆转化为可打卡、可留存的周历产品与推送内容。</p>
+      </div>
+      <div class="travel-calendar-grid">
+        <div class="travel-object-stage">
+          <button class="travel-object-main image-button" type="button" data-full="${base}c18_travel_calendar_mockup.png" data-title="旅行周历 / 产品本体">
+            <img src="${base}c18_travel_calendar_mockup.png" alt="旅行周历产品本体" loading="lazy" />
+          </button>
+          <div class="travel-proof-strip" aria-label="学生使用场景">
+            <button class="travel-proof image-button" type="button" data-full="${base}c23_travel_calendar_students.jpg" data-title="旅行周历 / 学生使用场景">
+              <img src="${base}c23_travel_calendar_students.jpg" alt="学生展示旅行周历" loading="lazy" />
+            </button>
+            <button class="travel-proof image-button" type="button" data-full="${base}c24_travel_calendar_feedback.jpg" data-title="旅行周历 / 毕业生打卡反馈">
+              <img src="${base}c24_travel_calendar_feedback.jpg" alt="毕业生手持旅行周历" loading="lazy" />
+            </button>
+            <button class="travel-proof image-button" type="button" data-full="${base}c25_travel_calendar_library.jpg" data-title="旅行周历 / 校园使用场景">
+              <img src="${base}c25_travel_calendar_library.jpg" alt="图书馆内使用旅行周历" loading="lazy" />
+            </button>
+          </div>
+        </div>
+        <div class="travel-ticket-panel">
+          <div class="travel-ticket-tabs" role="tablist" aria-label="旅行周历站点">
+            ${stops
+              .map(
+                (stop, index) => `
+                  <button class="travel-tab ${index === 0 ? "is-active" : ""}" type="button" role="tab" aria-selected="${index === 0}" data-ticket-image="${stop.image}" data-ticket-detail="${stop.detail}" data-ticket-title="${stop.title}">
+                    ${stop.label}
+                  </button>`
+              )
+              .join("")}
+          </div>
+          <div class="travel-ticket-stage">
+            <button class="travel-ticket-face image-button" type="button" data-full="${stops[0].image}" data-title="旅行周历 / ${stops[0].title}">
+              <img src="${stops[0].image}" alt="旅行周历第一站票根" loading="lazy" />
+            </button>
+            <button class="travel-ticket-page image-button" type="button" data-full="${stops[0].detail}" data-title="旅行周历 / ${stops[0].title} 内页">
+              <img src="${stops[0].detail}" alt="旅行周历第一站推送内页" loading="lazy" />
+            </button>
+          </div>
+          <p class="travel-ticket-note">选择站点，查看同一主题如何延展为票根与图文内容。</p>
+        </div>
+      </div>
+      <div class="travel-calendar-story">
+        <button class="travel-story-image image-button" type="button" data-full="${base}c26_travel_calendar_wechat_long.png" data-title="旅行周历 / 推送内容展示">
+          <img src="${base}c26_travel_calendar_wechat_long.png" alt="旅行周历推送内容长图" loading="lazy" />
+        </button>
+        <div class="travel-story-copy">
+          <span>CONTENT PATH</span>
+          <strong>产品本体 → 九周主题 → 推送图文 → 学生打卡</strong>
+          <p>以站点介绍和周历互动串联毕业前的校园记忆，让实体产品自然进入内容传播。</p>
+        </div>
+      </div>
+    </section>
+  `;
 }
 
 function renderCase(caseItem, index) {
@@ -475,6 +563,7 @@ function renderCase(caseItem, index) {
         }
       </div>
       ${followImageHtml ? `<div class="case-gallery follow-gallery">${followImageHtml}</div>` : ""}
+      ${caseItem.id === "xmu-media" ? renderTravelCalendarModule() : ""}
       <div class="case-transition" aria-hidden="true">
         <span>${index + 1 < portfolioCases.length ? "进入下一章节" : "作品集章节结束"}</span>
       </div>
@@ -598,9 +687,46 @@ function setupImageViewer() {
   });
 }
 
+function setupTravelCalendar() {
+  document.querySelectorAll(".travel-calendar-module").forEach((module) => {
+    const tabs = module.querySelectorAll(".travel-tab");
+    const faceButton = module.querySelector(".travel-ticket-face");
+    const pageButton = module.querySelector(".travel-ticket-page");
+    const faceImage = faceButton?.querySelector("img");
+    const pageImage = pageButton?.querySelector("img");
+    const stage = module.querySelector(".travel-ticket-stage");
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        if (tab.classList.contains("is-active") || !faceImage || !pageImage) return;
+
+        tabs.forEach((item) => {
+          item.classList.toggle("is-active", item === tab);
+          item.setAttribute("aria-selected", String(item === tab));
+        });
+
+        stage?.classList.add("is-switching");
+        window.setTimeout(() => {
+          const title = tab.dataset.ticketTitle;
+          faceImage.src = tab.dataset.ticketImage;
+          faceImage.alt = `旅行周历${title}票根`;
+          faceButton.dataset.full = tab.dataset.ticketImage;
+          faceButton.dataset.title = `旅行周历 / ${title}`;
+          pageImage.src = tab.dataset.ticketDetail;
+          pageImage.alt = `旅行周历${title}推送内页`;
+          pageButton.dataset.full = tab.dataset.ticketDetail;
+          pageButton.dataset.title = `旅行周历 / ${title} 内页`;
+          stage?.classList.remove("is-switching");
+        }, 180);
+      });
+    });
+  });
+}
+
 setProfile();
 renderCases();
 setupReveal();
 setupImageFallback();
 setupImageViewer();
 setupEvidenceConnectors();
+setupTravelCalendar();

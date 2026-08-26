@@ -1779,6 +1779,254 @@ h3 {
   transform: translateY(0) rotateX(0deg);
 }
 
+.travel-calendar-module {
+  grid-column: 1 / -1;
+  margin-top: 54px;
+  padding: 34px;
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 250, 240, 0.58);
+}
+
+.travel-calendar-heading {
+  display: grid;
+  grid-template-columns: 172px minmax(0, 1fr);
+  gap: 4px 22px;
+  align-items: baseline;
+  margin-bottom: 28px;
+}
+
+.travel-calendar-heading span,
+.travel-story-copy span {
+  color: var(--red);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.travel-calendar-heading h4 {
+  margin: 0;
+  font-size: 27px;
+  line-height: 1.28;
+}
+
+.travel-calendar-heading p {
+  grid-column: 2;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 15px;
+}
+
+.travel-calendar-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
+  gap: 32px;
+  align-items: stretch;
+}
+
+.travel-object-stage {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) 108px;
+  min-height: 440px;
+  border: 1px solid var(--line);
+  background: #d7e0ec;
+  overflow: hidden;
+}
+
+.travel-object-main {
+  min-height: 0;
+  padding: 18px;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.travel-object-main img {
+  object-fit: contain;
+  filter: drop-shadow(0 18px 24px rgba(24, 44, 82, 0.16));
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.travel-object-main:hover img,
+.travel-object-main:focus-visible img {
+  transform: scale(1.035) translateY(-5px);
+}
+
+.travel-proof-strip {
+  display: grid;
+  grid-template-columns: 1.32fr 0.7fr 0.7fr;
+  gap: 1px;
+  border-top: 1px solid rgba(24, 44, 82, 0.24);
+  background: rgba(24, 44, 82, 0.24);
+}
+
+.travel-proof {
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: var(--paper-2);
+  cursor: zoom-in;
+  overflow: hidden;
+}
+
+.travel-proof img {
+  transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.travel-proof:hover img,
+.travel-proof:focus-visible img {
+  transform: scale(1.09);
+}
+
+.travel-ticket-panel {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+}
+
+.travel-ticket-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.travel-tab {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid rgba(255, 250, 240, 0.32);
+  border-radius: 0;
+  background: transparent;
+  color: rgba(255, 250, 240, 0.7);
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  transition: color 320ms ease, background-color 320ms ease, transform 320ms ease;
+}
+
+.travel-tab:hover,
+.travel-tab:focus-visible,
+.travel-tab.is-active {
+  background: var(--paper-2);
+  color: var(--ink);
+}
+
+.travel-tab:hover {
+  transform: translateY(-2px);
+}
+
+.travel-ticket-stage {
+  position: relative;
+  display: grid;
+  flex: 1;
+  min-height: 320px;
+  padding: 18px 12px 12px;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.travel-ticket-stage.is-switching {
+  opacity: 0;
+  transform: translateX(14px);
+}
+
+.travel-ticket-face,
+.travel-ticket-page {
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: var(--paper-2);
+  cursor: zoom-in;
+  overflow: hidden;
+}
+
+.travel-ticket-face {
+  z-index: 2;
+  width: 90%;
+  align-self: start;
+  justify-self: start;
+  box-shadow: 14px 14px 0 rgba(255, 250, 240, 0.16);
+}
+
+.travel-ticket-page {
+  position: absolute;
+  right: 0;
+  bottom: 8px;
+  z-index: 1;
+  width: 73%;
+  box-shadow: -10px -10px 0 rgba(255, 250, 240, 0.1);
+}
+
+.travel-ticket-face img,
+.travel-ticket-page img {
+  aspect-ratio: 18 / 7;
+  object-fit: cover;
+}
+
+.travel-ticket-face img {
+  object-position: center;
+}
+
+.travel-ticket-page img {
+  object-position: center;
+}
+
+.travel-ticket-note {
+  margin: 8px 2px 0;
+  color: rgba(255, 250, 240, 0.7);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.travel-calendar-story {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 26px;
+  align-items: center;
+  margin-top: 28px;
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+}
+
+.travel-story-image {
+  height: 186px;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+  cursor: zoom-in;
+  overflow: hidden;
+}
+
+.travel-story-image img {
+  object-fit: cover;
+  object-position: top;
+  transition: transform 640ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.travel-story-image:hover img,
+.travel-story-image:focus-visible img {
+  transform: scale(1.05);
+}
+
+.travel-story-copy {
+  display: grid;
+  gap: 8px;
+  max-width: 570px;
+}
+
+.travel-story-copy strong {
+  font-family: Georgia, "Songti SC", serif;
+  font-size: 24px;
+  line-height: 1.35;
+}
+
+.travel-story-copy p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
 @media (max-width: 920px) {
   .hero,
   .method,
@@ -1894,6 +2142,18 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .travel-calendar-module {
+    margin-top: 36px;
+  }
+
+  .travel-calendar-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .travel-object-stage {
+    min-height: 390px;
+  }
+
   .work-card,
   .work-card.square,
   .work-card.portrait:not(.main),
@@ -1984,6 +2244,45 @@ h3 {
 
   .account-results-grid {
     grid-template-columns: 1fr;
+  }
+
+  .travel-calendar-module {
+    padding: 22px 16px;
+  }
+
+  .travel-calendar-heading {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+
+  .travel-calendar-heading h4 {
+    font-size: 23px;
+  }
+
+  .travel-calendar-heading p {
+    grid-column: auto;
+  }
+
+  .travel-object-stage {
+    grid-template-rows: minmax(0, 1fr) 84px;
+    min-height: 310px;
+  }
+
+  .travel-ticket-panel {
+    padding: 14px;
+  }
+
+  .travel-ticket-stage {
+    min-height: 260px;
+  }
+
+  .travel-calendar-story {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .travel-story-image {
+    height: 210px;
   }
 
   .event-promotion-grid {
