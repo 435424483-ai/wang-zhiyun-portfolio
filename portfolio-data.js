@@ -294,6 +294,21 @@ const portfolioCases = [
       "基于志愿服务与项目参与表现，获南华社区“优秀志愿者”称号。",
       "参与项目获思明区“青春合伙人”志愿服务铜奖。"
     ],
-    images: []
+    images: [
+      {
+        id: "F1",
+        title: "反诈宣传漫画：黄牛的“PS 修图课”",
+        src: "assets/f_party_branch/f01_anti_fraud_comic_cover.jpg",
+        detailLevel: "main",
+        note: "以青年化漫画切入非官方票务骗局。"
+      },
+      {
+        id: "F2",
+        title: "反诈宣传漫画长图",
+        src: "assets/f_party_branch/f02_anti_fraud_comic_longform.jpg",
+        detailLevel: "support",
+        note: "用分镜叙事呈现识骗与防骗提示。"
+      }
+    ]
   }
 ];

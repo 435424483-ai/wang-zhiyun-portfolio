@@ -63,7 +63,9 @@ const imageMeta = {
   "assets/e_xiayu_studio/e25_book_design_self_cultivation.png": { width: 4000, height: 2961 },
   "assets/e_xiayu_studio/e26_book_design_innovation.png": { width: 4000, height: 2961 },
   "assets/e_xiayu_studio/e27_xiaohongshu_women_statement.jpg": { width: 1440, height: 2038 },
-  "assets/e_xiayu_studio/e28_xiaohongshu_daily_language.png": { width: 1216, height: 1778 }
+  "assets/e_xiayu_studio/e28_xiaohongshu_daily_language.png": { width: 1216, height: 1778 },
+  "assets/f_party_branch/f01_anti_fraud_comic_cover.jpg": { width: 2350, height: 1000 },
+  "assets/f_party_branch/f02_anti_fraud_comic_longform.jpg": { width: 1080, height: 6000 }
 };
 
 function imageKind(src) {
@@ -96,7 +98,8 @@ function leadCountForCase(caseItem, orderedImages) {
     "xmu-media": 2,
     "human-museum": 3,
     "xiayu-studio": 3,
-    "xiayu-campus": 3
+    "xiayu-campus": 3,
+    "party-branch": 1
   };
   return Math.min(desired[caseItem.id] || 2, orderedImages.length);
 }
@@ -106,7 +109,8 @@ function featureIdsForCase(caseItem) {
     "people-daily": ["A4", "A5", "A6", "A7"],
     gulangyu: ["B7", "B8", "B9", "B3", "B4", "B5", "B10", "B11"],
     "xiayu-studio": ["E2", "E4", "E5", "E6", "E27", "E28"],
-    "xiayu-campus": []
+    "xiayu-campus": [],
+    "party-branch": ["F2"]
   };
   return featured[caseItem.id] || [];
 }
