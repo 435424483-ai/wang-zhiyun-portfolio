@@ -1048,7 +1048,7 @@ h3 {
 }
 
 .case-gulangyu .lead-gallery {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
@@ -1060,13 +1060,6 @@ h3 {
 
 .case-gulangyu .lead-gallery .work-b6 {
   grid-column: 1 / -1 !important;
-}
-
-.case-gulangyu .lead-gallery .work-b1 .work-image img,
-.case-gulangyu .lead-gallery .work-b2 .work-image img {
-  height: 360px;
-  max-height: none;
-  object-fit: contain;
 }
 
 .case-gulangyu .lead-gallery .work-b6 .work-image img {
@@ -1085,6 +1078,13 @@ h3 {
 
 .case-gulangyu .feature-row .work-image img {
   max-height: 420px;
+}
+
+.case-gulangyu .work-b10 .work-image img,
+.case-gulangyu .work-b11 .work-image img {
+  height: 440px;
+  max-height: none;
+  object-fit: contain;
 }
 
 .case-xiayu-studio .feature-row {

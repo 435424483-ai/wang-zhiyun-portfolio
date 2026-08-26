@@ -17,6 +17,8 @@ const imageMeta = {
   "assets/b_gulangyu/b07_landmark_magic_cube.png": { width: 1448, height: 1086 },
   "assets/b_gulangyu/b08_minoyaki_product_set.png": { width: 1448, height: 1086 },
   "assets/b_gulangyu/b09_landmark_thermos.png": { width: 1448, height: 1086 },
+  "assets/b_gulangyu/b10_nfc_record_magnet_clean.png": { width: 1312, height: 1862 },
+  "assets/b_gulangyu/b11_paper_cut_notebook_clean.png": { width: 1487, height: 1059 },
   "assets/c_xmu_media/c03_media_memory_longform_01.jpg": { width: 3000, height: 5619 },
   "assets/c_xmu_media/c04_graduation_gift_cover.png": { width: 2350, height: 1000 },
   "assets/c_xmu_media/c05_calendar_body.png": { width: 4500, height: 3645 },
@@ -90,7 +92,7 @@ function visualWeight(src) {
 function leadCountForCase(caseItem, orderedImages) {
   const desired = {
     "people-daily": 2,
-    gulangyu: 3,
+    gulangyu: 1,
     "xmu-media": 2,
     "human-museum": 3,
     "xiayu-studio": 3,
@@ -102,7 +104,7 @@ function leadCountForCase(caseItem, orderedImages) {
 function featureIdsForCase(caseItem) {
   const featured = {
     "people-daily": ["A4", "A5", "A6", "A7"],
-    gulangyu: ["B7", "B8", "B9", "B3", "B4", "B5"],
+    gulangyu: ["B7", "B8", "B9", "B3", "B4", "B5", "B10", "B11"],
     "xiayu-studio": ["E2", "E4", "E5", "E6", "E27", "E28"],
     "xiayu-campus": []
   };
@@ -119,7 +121,7 @@ function carouselIdsForCase(caseItem) {
 function featureRowsForCase(caseItem, featuredImages) {
   const rows = {
     "xiayu-studio": [["E2", "E4"], ["E5", "E6"], ["E27", "E28"]],
-    gulangyu: [["B7", "B8"], ["B9", "B3"], ["B4", "B5"]]
+    gulangyu: [["B7", "B8"], ["B9", "B3"], ["B4", "B5"], ["B10", "B11"]]
   };
   const definedRows = rows[caseItem.id];
   if (!definedRows) return [featuredImages];
