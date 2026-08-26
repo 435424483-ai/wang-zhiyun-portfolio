@@ -114,7 +114,7 @@ function leadCountForCase(caseItem, orderedImages) {
 
 function leadIdsForCase(caseItem) {
   const leadIds = {
-    "xmu-media": ["C13", "C14", "C15", "C16", "C17"]
+    "xmu-media": ["C13", "C17", "C15", "C16", "C14"]
   };
   return leadIds[caseItem.id] || null;
 }
@@ -241,6 +241,14 @@ function renderCase(caseItem, index) {
   );
 
   const renderImageCard = (image) => {
+    const xmuPushLabels = {
+      C13: "年度报告",
+      C14: "毕业季礼盒",
+      C15: "二十大头像框",
+      C16: "新生写真",
+      C17: "厦大风壁纸"
+    };
+    const pushLabel = xmuPushLabels[image.id] ? `青春厦大 / ${xmuPushLabels[image.id]}` : "";
     const imageControl = image.link
       ? `<a class="image-button external-article-link" href="${image.link}" target="_blank" rel="noopener noreferrer" title="打开公众号原文">
           <img src="${image.src}" alt="${image.title}" loading="eager" />
@@ -251,7 +259,7 @@ function renderCase(caseItem, index) {
         </button>`;
 
     return `
-    <figure class="work-card work-${image.id.toLowerCase()} ${image.detailLevel === "main" ? "main" : ""} ${imageKind(image.src)} reveal">
+    <figure class="work-card work-${image.id.toLowerCase()} ${image.detailLevel === "main" ? "main" : ""} ${imageKind(image.src)} reveal"${pushLabel ? ` data-push-label="${pushLabel}"` : ""}>
       <div class="work-image">
         ${imageControl}
       </div>
