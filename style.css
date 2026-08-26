@@ -1042,7 +1042,7 @@ h3 {
 .case-xmu-media .lead-gallery {
   position: relative;
   display: block;
-  min-height: 590px;
+  min-height: 820px;
   overflow: visible;
   isolation: isolate;
 }
@@ -1100,6 +1100,20 @@ h3 {
   transform: rotate(-1.2deg);
 }
 
+.case-xmu-media .lead-gallery .work-card:nth-child(4) {
+  top: 364px;
+  left: 7%;
+  z-index: 4;
+  transform: rotate(1.6deg);
+}
+
+.case-xmu-media .lead-gallery .work-card:nth-child(5) {
+  top: 474px;
+  left: 3%;
+  z-index: 5;
+  transform: rotate(-1deg);
+}
+
 .case-xmu-media .lead-gallery .work-card:hover,
 .case-xmu-media .lead-gallery .work-card:focus-within {
   z-index: 7;
@@ -1119,6 +1133,16 @@ h3 {
 .case-xmu-media .lead-gallery .work-card:nth-child(3):hover,
 .case-xmu-media .lead-gallery .work-card:nth-child(3):focus-within {
   transform: translate(-12px, -48px) rotate(0deg);
+}
+
+.case-xmu-media .lead-gallery .work-card:nth-child(4):hover,
+.case-xmu-media .lead-gallery .work-card:nth-child(4):focus-within {
+  transform: translate(22px, -50px) rotate(0.4deg);
+}
+
+.case-xmu-media .lead-gallery .work-card:nth-child(5):hover,
+.case-xmu-media .lead-gallery .work-card:nth-child(5):focus-within {
+  transform: translate(-16px, -54px) rotate(0deg);
 }
 
 .case-xmu-media .lead-gallery .work-image {

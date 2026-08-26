@@ -276,7 +276,9 @@ const portfolioCases = [
       { id: "C12", title: "年度长图大封面 2", src: "assets/c_xmu_media/c12_year_review_cover_02.png", detailLevel: "main", note: "展示内容运营中的封面判断与传播入口设计。" },
       { id: "C13", title: "厦大青年 2022 年度报告", src: "assets/c_xmu_media/c13_xmu_annual_report.png", detailLevel: "main", note: "阅读 1.0 万，赞 323。", link: "https://mp.weixin.qq.com/s/DGIpp092yuqByXNLMku6SA" },
       { id: "C14", title: "毕业季礼盒传播", src: "assets/c_xmu_media/c14_graduation_gift_article.png", detailLevel: "main", note: "阅读 2.2 万，赞 252。", link: "https://mp.weixin.qq.com/s/RamXHPI1r7KwtNcs2AIhRQ" },
-      { id: "C15", title: "校园主题内容传播", src: "assets/c_xmu_media/c15_autumn_campaign.png", detailLevel: "main", note: "阅读 1.4 万，赞 455。", link: "https://mp.weixin.qq.com/s/D1bfHW4xDROsiCgCWBWppQ" }
+      { id: "C15", title: "二十大主题头像框", src: "assets/c_xmu_media/c15_20th_congress_avatar_frame.png", detailLevel: "main", note: "限量 2000 个，阅读 2530。" },
+      { id: "C16", title: "抢先看：2022 级新生写真", src: "assets/c_xmu_media/c16_new_student_portraits.png", detailLevel: "main", note: "阅读 7207，赞 115。" },
+      { id: "C17", title: "厦大风手机壁纸上新", src: "assets/c_xmu_media/c17_xmu_wallpapers.png", detailLevel: "main", note: "阅读 4947，赞 59。" }
     ]
   },
   {

@@ -28,7 +28,9 @@ const imageMeta = {
   "assets/c_xmu_media/c12_year_review_cover_02.png": { width: 2350, height: 1000 },
   "assets/c_xmu_media/c13_xmu_annual_report.png": { width: 1216, height: 960 },
   "assets/c_xmu_media/c14_graduation_gift_article.png": { width: 1216, height: 960 },
-  "assets/c_xmu_media/c15_autumn_campaign.png": { width: 1216, height: 960 },
+  "assets/c_xmu_media/c15_20th_congress_avatar_frame.png": { width: 1216, height: 960 },
+  "assets/c_xmu_media/c16_new_student_portraits.png": { width: 1216, height: 960 },
+  "assets/c_xmu_media/c17_xmu_wallpapers.png": { width: 1216, height: 960 },
   "assets/d_museum/d01_jixiang_babao.jpg": { width: 3508, height: 4961 },
   "assets/d_museum/d02_baxian_guohai_01.jpg": { width: 3508, height: 4961 },
   "assets/d_museum/d03_qiequ_wen.jpg": { width: 3508, height: 4961 },
@@ -112,7 +114,7 @@ function leadCountForCase(caseItem, orderedImages) {
 
 function leadIdsForCase(caseItem) {
   const leadIds = {
-    "xmu-media": ["C13", "C14", "C15"]
+    "xmu-media": ["C13", "C14", "C15", "C16", "C17"]
   };
   return leadIds[caseItem.id] || null;
 }
