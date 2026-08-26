@@ -1040,17 +1040,120 @@ h3 {
 }
 
 .case-xmu-media .lead-gallery {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  position: relative;
+  display: block;
+  min-height: 590px;
+  overflow: visible;
+  isolation: isolate;
 }
 
 .case-xmu-media .lead-gallery .work-card,
 .case-xmu-media .lead-gallery .work-card.main {
-  grid-column: auto;
+  position: absolute;
+  left: 4%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 156px;
+  width: min(92%, 560px);
+  min-height: 288px;
+  margin: 0;
+  overflow: visible;
+  transform-origin: center bottom;
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.case-xmu-media .lead-gallery .work-card::before {
+  position: absolute;
+  top: -23px;
+  left: 24px;
+  z-index: -1;
+  width: 118px;
+  height: 27px;
+  border: 1px solid rgba(24, 44, 82, 0.2);
+  border-bottom: 0;
+  border-radius: 8px 8px 0 0;
+  background: #eae0cf;
+  color: var(--ink-soft);
+  content: "青春厦大 / 推送";
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 27px;
+  text-align: center;
+}
+
+.case-xmu-media .lead-gallery .work-card:nth-child(1) {
+  top: 34px;
+  z-index: 1;
+  transform: rotate(-4deg);
+}
+
+.case-xmu-media .lead-gallery .work-card:nth-child(2) {
+  top: 144px;
+  left: 7%;
+  z-index: 2;
+  transform: rotate(2deg);
+}
+
+.case-xmu-media .lead-gallery .work-card:nth-child(3) {
+  top: 254px;
+  left: 3%;
+  z-index: 3;
+  transform: rotate(-1.2deg);
+}
+
+.case-xmu-media .lead-gallery .work-card:hover,
+.case-xmu-media .lead-gallery .work-card:focus-within {
+  z-index: 7;
+  box-shadow: 0 18px 34px rgba(24, 44, 82, 0.18);
+}
+
+.case-xmu-media .lead-gallery .work-card:nth-child(1):hover,
+.case-xmu-media .lead-gallery .work-card:nth-child(1):focus-within {
+  transform: translate(-18px, -34px) rotate(-2deg);
+}
+
+.case-xmu-media .lead-gallery .work-card:nth-child(2):hover,
+.case-xmu-media .lead-gallery .work-card:nth-child(2):focus-within {
+  transform: translate(24px, -42px) rotate(1deg);
+}
+
+.case-xmu-media .lead-gallery .work-card:nth-child(3):hover,
+.case-xmu-media .lead-gallery .work-card:nth-child(3):focus-within {
+  transform: translate(-12px, -48px) rotate(0deg);
+}
+
+.case-xmu-media .lead-gallery .work-image {
+  height: 100%;
+  border-right: 1px solid var(--line);
+  border-bottom: 0;
+}
+
+.case-xmu-media .lead-gallery .image-button {
+  height: 100%;
+  padding: 10px;
+  cursor: pointer;
 }
 
 .case-xmu-media .lead-gallery .work-image img {
-  max-height: 280px;
+  height: 100%;
+  max-height: none;
+  object-fit: contain;
+}
+
+.case-xmu-media .lead-gallery .work-caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px 14px;
+}
+
+.case-xmu-media .lead-gallery .work-caption h3 {
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.case-xmu-media .lead-gallery .work-caption p {
+  font-size: 13px;
+  line-height: 1.55;
 }
 
 .external-article-link {
@@ -1705,6 +1808,25 @@ h3 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
+  .case-xmu-media .lead-gallery {
+    display: grid;
+    min-height: 0;
+    gap: 18px;
+  }
+
+  .case-xmu-media .lead-gallery .work-card,
+  .case-xmu-media .lead-gallery .work-card.main {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    transform: none;
+  }
+
+  .case-xmu-media .lead-gallery .work-card::before {
+    display: none;
+  }
+
   .evidence-row {
     grid-template-columns: 1fr;
     gap: 18px;
@@ -1810,6 +1932,22 @@ h3 {
     max-height: none;
     overflow: visible;
     padding-right: 0;
+  }
+
+  .case-xmu-media .lead-gallery .work-card,
+  .case-xmu-media .lead-gallery .work-card.main {
+    grid-template-columns: 1fr;
+  }
+
+  .case-xmu-media .lead-gallery .work-image {
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .case-xmu-media .lead-gallery .image-button,
+  .case-xmu-media .lead-gallery .work-image img {
+    height: auto;
   }
 
   .follow-gallery {
