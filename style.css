@@ -1039,6 +1039,45 @@ h3 {
   padding: 16px 18px 18px;
 }
 
+.case-xmu-media .lead-gallery {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.case-xmu-media .lead-gallery .work-card,
+.case-xmu-media .lead-gallery .work-card.main {
+  grid-column: auto;
+}
+
+.case-xmu-media .lead-gallery .work-image img {
+  max-height: 280px;
+}
+
+.external-article-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.external-article-link span {
+  position: absolute;
+  inset: auto 10px 10px auto;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: rgba(24, 44, 82, 0.84);
+  color: var(--paper-2);
+  font-size: 12px;
+  font-weight: 800;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.external-article-link:hover span,
+.external-article-link:focus-visible span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .case-human-museum .follow-gallery {
   align-items: start;
 }

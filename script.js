@@ -26,6 +26,9 @@ const imageMeta = {
   "assets/c_xmu_media/c09_badge_blue_yellow_mockup.png": { width: 1254, height: 1661 },
   "assets/c_xmu_media/c11_year_review_opening.png": { width: 1000, height: 4200 },
   "assets/c_xmu_media/c12_year_review_cover_02.png": { width: 2350, height: 1000 },
+  "assets/c_xmu_media/c13_xmu_annual_report.png": { width: 1216, height: 960 },
+  "assets/c_xmu_media/c14_graduation_gift_article.png": { width: 1216, height: 960 },
+  "assets/c_xmu_media/c15_autumn_campaign.png": { width: 1216, height: 960 },
   "assets/d_museum/d01_jixiang_babao.jpg": { width: 3508, height: 4961 },
   "assets/d_museum/d02_baxian_guohai_01.jpg": { width: 3508, height: 4961 },
   "assets/d_museum/d03_qiequ_wen.jpg": { width: 3508, height: 4961 },
@@ -105,6 +108,13 @@ function leadCountForCase(caseItem, orderedImages) {
     "party-branch": 1
   };
   return Math.min(desired[caseItem.id] || 2, orderedImages.length);
+}
+
+function leadIdsForCase(caseItem) {
+  const leadIds = {
+    "xmu-media": ["C13", "C14", "C15"]
+  };
+  return leadIds[caseItem.id] || null;
 }
 
 function featureIdsForCase(caseItem) {
@@ -195,7 +205,10 @@ function renderCase(caseItem, index) {
   const evidenceLinks = caseItem.evidenceLinks || [];
   const evidenceImageIds = new Set(evidenceLinks.flatMap((link) => link.imageIds || []));
   const galleryImages = orderedImages.filter((image) => !evidenceImageIds.has(image.id));
-  const leadImages = galleryImages.slice(0, leadCountForCase(caseItem, galleryImages));
+  const leadIds = leadIdsForCase(caseItem);
+  const leadImages = leadIds
+    ? leadIds.map((id) => galleryImages.find((image) => image.id === id)).filter(Boolean)
+    : galleryImages.slice(0, leadCountForCase(caseItem, galleryImages));
   const featureIds = featureIdsForCase(caseItem);
   const carouselIds = carouselIdsForCase(caseItem);
   const sectionedIds = sectionedImageIdsForCase(caseItem);
@@ -225,20 +238,29 @@ function renderCase(caseItem, index) {
     { left: [], right: [], leftHeight: 0, rightHeight: 0 }
   );
 
-  const renderImageCard = (image) => `
+  const renderImageCard = (image) => {
+    const imageControl = image.link
+      ? `<a class="image-button external-article-link" href="${image.link}" target="_blank" rel="noopener noreferrer" title="打开公众号原文">
+          <img src="${image.src}" alt="${image.title}" loading="eager" />
+          <span>打开公众号原文</span>
+        </a>`
+      : `<button class="image-button" type="button" data-full="${image.src}" data-title="${image.id} ${image.title}">
+          <img src="${image.src}" alt="${image.title}" loading="eager" />
+        </button>`;
+
+    return `
     <figure class="work-card work-${image.id.toLowerCase()} ${image.detailLevel === "main" ? "main" : ""} ${imageKind(image.src)} reveal">
       <div class="work-image">
-        <button class="image-button" type="button" data-full="${image.src}" data-title="${image.id} ${image.title}">
-          <img src="${image.src}" alt="${image.title}" loading="eager" />
-        </button>
+        ${imageControl}
       </div>
       <figcaption class="work-caption">
         <strong>${image.id} ${image.title}</strong>
         <p>${image.note}</p>
-        <small>点击图片放大查看</small>
+        <small>${image.link ? "点击图片打开公众号原文" : "点击图片放大查看"}</small>
       </figcaption>
     </figure>
   `;
+  };
 
   const renderEvidenceProof = (link) => {
     const evidenceImages = (link.imageIds || [])
@@ -548,6 +570,7 @@ function setupImageViewer() {
   document.addEventListener("click", (event) => {
     const trigger = event.target.closest(".image-button");
     if (!trigger) return;
+    if (trigger.classList.contains("external-article-link")) return;
 
     viewerImage.src = trigger.dataset.full;
     viewerImage.alt = trigger.dataset.title;

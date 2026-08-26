@@ -273,7 +273,10 @@ const portfolioCases = [
       { id: "C6", title: "毕业礼盒打卡单", src: "assets/c_xmu_media/c06_checkin_card.png", detailLevel: "support", note: "展示配套物料和使用场景。" },
       { id: "C9", title: "吧唧蓝黄款样机", src: "assets/c_xmu_media/c09_badge_blue_yellow_mockup.png", detailLevel: "support", note: "作为校园文创补充，不作为主讲图。" },
       { id: "C11", title: "年度长图开头", src: "assets/c_xmu_media/c11_year_review_opening.png", detailLevel: "main", note: "展示大型内容开场、信息组织和叙事基调。" },
-      { id: "C12", title: "年度长图大封面 2", src: "assets/c_xmu_media/c12_year_review_cover_02.png", detailLevel: "main", note: "展示内容运营中的封面判断与传播入口设计。" }
+      { id: "C12", title: "年度长图大封面 2", src: "assets/c_xmu_media/c12_year_review_cover_02.png", detailLevel: "main", note: "展示内容运营中的封面判断与传播入口设计。" },
+      { id: "C13", title: "厦大青年 2022 年度报告", src: "assets/c_xmu_media/c13_xmu_annual_report.png", detailLevel: "main", note: "阅读 1.0 万，赞 323。", link: "https://mp.weixin.qq.com/s/DGIpp092yuqByXNLMku6SA" },
+      { id: "C14", title: "毕业季礼盒传播", src: "assets/c_xmu_media/c14_graduation_gift_article.png", detailLevel: "main", note: "阅读 2.2 万，赞 252。", link: "https://mp.weixin.qq.com/s/RamXHPI1r7KwtNcs2AIhRQ" },
+      { id: "C15", title: "校园主题内容传播", src: "assets/c_xmu_media/c15_autumn_campaign.png", detailLevel: "main", note: "阅读 1.4 万，赞 455。", link: "https://mp.weixin.qq.com/s/D1bfHW4xDROsiCgCWBWppQ" }
     ]
   },
   {
