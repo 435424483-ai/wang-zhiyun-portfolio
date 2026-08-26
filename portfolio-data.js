@@ -167,8 +167,11 @@ const portfolioCases = [
       { id: "E4", title: "在地文化产品细节", src: "assets/e_xiayu_studio/e04_local_culture_product_detail.jpg", detailLevel: "support", note: "作为品牌视觉与在地文化融合的产品细节佐证。" },
       { id: "E5", title: "市集产品墙与账号引流", src: "assets/e_xiayu_studio/e05_market_product_wall.jpg", detailLevel: "support", note: "展示产品陈列、扫码关注与销售转化场景。" },
       { id: "E6", title: "创意市集产品桌面陈列", src: "assets/e_xiayu_studio/e06_creative_market_product_table.jpg", detailLevel: "support", note: "呈现布艺产品、挂件等品类的线下销售状态。" },
-      { id: "E27", title: "小红书主题内容发文：女性宣言", src: "assets/e_xiayu_studio/e27_xiaohongshu_women_statement.jpg", detailLevel: "support", note: "围绕 IP 角色与女性议题拓展内容表达。" },
-      { id: "E28", title: "小红书内容发文：妈祖日常", src: "assets/e_xiayu_studio/e28_xiaohongshu_daily_language.png", detailLevel: "support", note: "展示 MAZOO 妈祖账号中的日常化内容表达。" }
+      { id: "E29", title: "MAZOO 妈祖账号主页", src: "assets/e_xiayu_studio/e29_xiaohongshu_account_profile.png", detailLevel: "support", note: "账号粉丝 3000+，持续运营原创 IP 内容。" },
+      { id: "E27", title: "内容选题：女性宣言", src: "assets/e_xiayu_studio/e27_xiaohongshu_women_statement.jpg", detailLevel: "support", note: "围绕 IP 角色拓展女性议题表达。" },
+      { id: "E28", title: "高互动内容：妈祖日常", src: "assets/e_xiayu_studio/e28_xiaohongshu_daily_language.png", detailLevel: "support", note: "单篇获赞 600+。" },
+      { id: "E30", title: "上海国际插画艺术节宣传海报", src: "assets/e_xiayu_studio/e30_shanghai_illustration_festival.jpg", detailLevel: "support", note: "服务线下艺术节传播。" },
+      { id: "E31", title: "杭州插画艺术展宣传海报", src: "assets/e_xiayu_studio/e31_hangzhou_illustration_expo.jpg", detailLevel: "support", note: "服务线下展会宣传。" }
     ]
   },
   {

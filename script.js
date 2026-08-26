@@ -64,6 +64,9 @@ const imageMeta = {
   "assets/e_xiayu_studio/e26_book_design_innovation.png": { width: 4000, height: 2961 },
   "assets/e_xiayu_studio/e27_xiaohongshu_women_statement.jpg": { width: 1440, height: 2038 },
   "assets/e_xiayu_studio/e28_xiaohongshu_daily_language.png": { width: 1216, height: 1778 },
+  "assets/e_xiayu_studio/e29_xiaohongshu_account_profile.png": { width: 765, height: 332 },
+  "assets/e_xiayu_studio/e30_shanghai_illustration_festival.jpg": { width: 1080, height: 1440 },
+  "assets/e_xiayu_studio/e31_hangzhou_illustration_expo.jpg": { width: 1280, height: 1707 },
   "assets/f_party_branch/f01_anti_fraud_comic_cover.jpg": { width: 2350, height: 1000 },
   "assets/f_party_branch/f02_anti_fraud_comic_longform.jpg": { width: 1080, height: 6000 }
 };
@@ -108,7 +111,7 @@ function featureIdsForCase(caseItem) {
   const featured = {
     "people-daily": ["A4", "A5", "A6", "A7"],
     gulangyu: ["B7", "B8", "B9", "B3", "B4", "B5", "B10", "B11"],
-    "xiayu-studio": ["E2", "E4", "E5", "E6", "E27", "E28"],
+    "xiayu-studio": ["E2", "E4", "E5", "E6"],
     "xiayu-campus": [],
     "party-branch": ["F2"]
   };
@@ -120,6 +123,13 @@ function carouselIdsForCase(caseItem) {
     "xiayu-campus": ["E19", "E20", "E21", "E22", "E23", "E24", "E25", "E26"]
   };
   return carousel[caseItem.id] || [];
+}
+
+function sectionedImageIdsForCase(caseItem) {
+  const sections = {
+    "xiayu-studio": ["E29", "E27", "E28", "E30", "E31"]
+  };
+  return sections[caseItem.id] || [];
 }
 
 function featureRowsForCase(caseItem, featuredImages) {
@@ -188,6 +198,7 @@ function renderCase(caseItem, index) {
   const leadImages = galleryImages.slice(0, leadCountForCase(caseItem, galleryImages));
   const featureIds = featureIdsForCase(caseItem);
   const carouselIds = carouselIdsForCase(caseItem);
+  const sectionedIds = sectionedImageIdsForCase(caseItem);
   const featuredFollowImages = galleryImages.filter(
     (image) => featureIds.includes(image.id) && !leadImages.some((lead) => lead.id === image.id)
   ).sort((a, b) => featureIds.indexOf(a.id) - featureIds.indexOf(b.id));
@@ -201,7 +212,8 @@ function renderCase(caseItem, index) {
     (image) =>
       !leadImages.some((lead) => lead.id === image.id) &&
       !featuredFollowImages.some((featured) => featured.id === image.id) &&
-      !carouselImages.some((carouselImage) => carouselImage.id === image.id)
+      !carouselImages.some((carouselImage) => carouselImage.id === image.id) &&
+      !sectionedIds.includes(image.id)
   );
   const balancedColumns = remainingImages.reduce(
     (columns, image) => {
@@ -317,14 +329,47 @@ function renderCase(caseItem, index) {
   const featuredRowsHtml = featureRowsForCase(caseItem, featuredFollowImages)
     .map((row) => `<div class="feature-row">${row.map(renderImageCard).join("")}</div>`)
     .join("");
+  const sectionedImages = galleryImages
+    .filter((image) => sectionedIds.includes(image.id))
+    .sort((a, b) => sectionedIds.indexOf(a.id) - sectionedIds.indexOf(b.id));
+  const accountResultIds = ["E29", "E27", "E28"];
+  const eventPromotionIds = ["E30", "E31"];
+  const accountResultImages = sectionedImages.filter((image) => accountResultIds.includes(image.id));
+  const eventPromotionImages = sectionedImages.filter((image) => eventPromotionIds.includes(image.id));
+  const accountResultsHtml =
+    caseItem.id === "xiayu-studio" && accountResultImages.length
+      ? `
+        <section class="account-results" aria-label="账号运营结果">
+          <div class="account-results-heading">
+            <span>CONTENT OPERATION</span>
+            <h4>账号运营结果</h4>
+          </div>
+          <div class="account-results-grid">${accountResultImages.map(renderImageCard).join("")}</div>
+        </section>
+      `
+      : "";
+  const eventPromotionHtml =
+    caseItem.id === "xiayu-studio" && eventPromotionImages.length
+      ? `
+        <section class="event-promotion" aria-label="线下艺术节传播">
+          <div class="event-promotion-heading">
+            <span>OFFLINE PROMOTION</span>
+            <h4>线下艺术节传播</h4>
+          </div>
+          <div class="event-promotion-grid">${eventPromotionImages.map(renderImageCard).join("")}</div>
+        </section>
+      `
+      : "";
   const carouselHtml = carouselImages.map(renderImageCard).join("");
   const leftFollowHtml = balancedColumns.left.map(renderImageCard).join("");
   const rightFollowHtml = balancedColumns.right.map(renderImageCard).join("");
   const sideEvidenceHtml = renderSideEvidence();
-  const hasFollowImages = featuredRowsHtml || carouselHtml || leftFollowHtml || rightFollowHtml;
+  const hasFollowImages = featuredRowsHtml || accountResultsHtml || eventPromotionHtml || carouselHtml || leftFollowHtml || rightFollowHtml;
   const followImageHtml = hasFollowImages
     ? `
       ${featuredRowsHtml}
+      ${accountResultsHtml}
+      ${eventPromotionHtml}
       ${carouselHtml ? `<div class="carousel-row" aria-label="系列作品横向浏览">${carouselHtml}</div>` : ""}
       <div class="gallery-column">${leftFollowHtml}</div>
       <div class="gallery-column">${rightFollowHtml}</div>
