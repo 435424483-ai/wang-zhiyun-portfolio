@@ -10455,3 +10455,16 @@ body {
     transition: none !important;
   }
 }
+.image-unavailable { opacity: 0 !important; }
+.image-retry-status {
+  position: absolute;
+  inset: auto 8px 8px;
+  padding: 8px;
+  color: var(--ink-soft);
+  background: #fffefa;
+  font: 12px/1.4 sans-serif;
+  text-align: center;
+  cursor: pointer;
+  z-index: 15;
+}
+.viewer-load-status { display: block; color: #d4dce3; font-size: 13px; min-height: 1.5em; }

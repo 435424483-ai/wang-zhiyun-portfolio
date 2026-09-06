@@ -1479,7 +1479,10 @@ function renderCase(caseItem, index) {
 }
 
 function renderCases() {
-  byId("case-list").innerHTML = portfolioCases.map(renderCase).join("");
+  const template = document.createElement("template");
+  template.innerHTML = portfolioCases.map(renderCase).join("");
+  preparePortfolioImages(template.content);
+  byId("case-list").replaceChildren(template.content);
 }
 
 function setupEvidenceConnectors() {
@@ -1523,7 +1526,7 @@ function setupReveal() {
         }
       });
     },
-    { threshold: 0.12 }
+    { threshold: 0.01 }
   );
 
   document.querySelectorAll(".reveal, .method-grid article").forEach((element) => {
@@ -1552,10 +1555,7 @@ function setupImageFallback() {
 
     if (image.complete) classifyImage(image);
 
-    image.addEventListener("error", () => {
-      image.closest("figure")?.classList.add("image-missing");
-      image.alt = `${image.alt} 图片未能加载`;
-    });
+    enablePortfolioImageRecovery(image);
   });
 }
 
@@ -1564,13 +1564,21 @@ function setupImageViewer() {
   const viewerImage = byId("viewer-image");
   const viewerCaption = byId("viewer-caption");
   const closeButton = viewer.querySelector(".viewer-close");
+  let viewerRequest = 0;
+  const viewerStatus = document.createElement("span");
+  viewerStatus.className = "viewer-load-status";
+  viewerStatus.setAttribute("role", "status");
+  viewerCaption.after(viewerStatus);
 
   const closeViewer = () => {
+    viewerRequest += 1;
     viewer.classList.remove("open");
     viewer.setAttribute("aria-hidden", "true");
-    viewerImage.src = "";
+    viewerImage.removeAttribute("src");
+    viewerImage.removeAttribute("srcset");
     viewerImage.alt = "";
     viewerCaption.textContent = "";
+    viewerStatus.textContent = "";
   };
 
   document.addEventListener("click", (event) => {
@@ -1578,7 +1586,22 @@ function setupImageViewer() {
     if (!trigger) return;
     if (trigger.classList.contains("external-article-link")) return;
 
-    viewerImage.src = trigger.dataset.full;
+    const request = ++viewerRequest;
+    const original = trigger.dataset.full;
+    viewerImage.removeAttribute("srcset");
+    viewerImage.src = portfolioPreviewSource(original);
+    viewerStatus.textContent = "正在加载高清原图…";
+    const fullImage = new Image();
+    fullImage.onload = () => {
+      if (request !== viewerRequest) return;
+      viewerImage.src = original;
+      viewerStatus.textContent = "";
+    };
+    fullImage.onerror = () => {
+      if (request !== viewerRequest) return;
+      viewerStatus.textContent = "高清原图暂未加载，当前显示预览图。";
+    };
+    fullImage.src = original;
     viewerImage.alt = trigger.dataset.title;
     viewerCaption.textContent = trigger.dataset.title;
     viewer.setAttribute("aria-hidden", "false");
@@ -1635,7 +1658,7 @@ function setupHumanMuseumExperience() {
         if (switchToken !== boardSwitchToken) return;
         window.setTimeout(() => {
           if (switchToken !== boardSwitchToken) return;
-          seriesMainImage.src = asset.preview || asset.src;
+          applyPortfolioPreview(seriesMainImage, asset.preview || asset.src, true);
           seriesMainImage.alt = asset.title;
           seriesMainButton.dataset.full = asset.src;
           seriesMainButton.dataset.title = asset.title;
@@ -1657,7 +1680,7 @@ function setupHumanMuseumExperience() {
       preload.onerror = () => {
         if (switchToken === boardSwitchToken) seriesMain.classList.remove("is-switching");
       };
-      preload.src = asset.preview || asset.src;
+      preload.src = portfolioPreviewSource(asset.preview || asset.src);
     };
 
     const selectBoard = (nextIndex, focusThumb = false) => {
@@ -1721,8 +1744,7 @@ function setupHumanMuseumExperience() {
 
     cardFlip?.querySelectorAll("img").forEach((image) => {
       const markCardFaceMissing = () => image.closest(".museum-route-card-face")?.classList.add("is-missing");
-      image.addEventListener("error", markCardFaceMissing);
-      if (image.complete && !image.naturalWidth) markCardFaceMissing();
+      image.addEventListener("portfolioimageerror", markCardFaceMissing);
     });
 
     const track = museumCase.querySelector(".museum-extension-track");
@@ -1813,7 +1835,7 @@ function setupGraduationGiftExperience() {
         if (state.src && overviewButton && overviewImage) {
           overviewButton.dataset.full = state.src;
           overviewButton.dataset.title = state.title;
-          overviewImage.src = state.src;
+          applyPortfolioPreview(overviewImage, state.src, true);
           overviewImage.alt = state.alt;
         }
         overviewEyebrow.textContent = state.eyebrow;
