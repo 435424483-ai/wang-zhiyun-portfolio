@@ -1,9 +1,9 @@
 const portfolioProfile = {
   name: "汪之韵",
-  title: "品牌宣传运营 / 企业文化 / 新媒体传播",
-  headline: "把复杂内容转化为可传播、可落地的品牌内容",
+  title: "视觉设计 / 品牌传播 / 内容策划",
+  headline: "汪之韵",
   intro:
-    "围绕政务传播、文博科普、校园文创、组织宣传与新媒体平台运营，完成信息提炼、内容策划、视觉表达、发布复盘与落地转化。",
+    "目前就读于厦门大学艺术学院，主要关注视觉设计、品牌传播与文化内容策划。实践涵盖校园文化、博物馆、文创产品与公共艺术等方向。",
   contact: {
     phone: "18370161262",
     email: "435424483@qq.com"
@@ -86,23 +86,24 @@ const portfolioCases = [
     ],
     images: [
       { id: "A1", title: "闽式纳凉", src: "assets/a_people_daily/a01_minshi_naliang.jpg", detailLevel: "main", note: "作为总结型图，展示系列视觉调性和地域文化内容整合。" },
-      { id: "A2", title: "清凉福地", src: "assets/a_people_daily/a02_qingliang_fudi.jpg", detailLevel: "support", note: "与闽式纳凉形成同主题对比。" },
-      { id: "A3", title: "奥运时刻荣耀", src: "assets/a_people_daily/a03_olympic_glory.jpg", detailLevel: "main", note: "展示奥运热点主题下的快速响应与正向传播语气。" },
+      { id: "A2", title: "清凉福地系列总览", src: "assets/a_people_daily/a02_qingliang_fudi.jpg", detailLevel: "support", note: "总结型图，展示地域文旅系列的整体面貌。" },
+      { id: "A3", title: "奥运时刻系列总览", src: "assets/a_people_daily/a03_olympic_glory_source.jpg", detailLevel: "main", note: "总结型图，展示奥运热点主题下的系列视觉。" },
       { id: "A4", title: "宋词里的福建 0619", src: "assets/a_people_daily/a04_songci_fujian_0619.jpg", detailLevel: "support", note: "文化内容视觉化候选。" },
-      { id: "A5", title: "宋词里的福建 0620", src: "assets/a_people_daily/a05_songci_fujian_0620.jpg", detailLevel: "support", note: "文化内容视觉化候选，可与 A4 组成小系列。" },
       { id: "A6", title: "国际禁毒日", src: "assets/a_people_daily/a06_anti_drug_day.jpg", detailLevel: "main", note: "展示严肃公共议题中的设计控制力。" },
-      { id: "A7", title: "0710 实用黑科技", src: "assets/a_people_daily/a07_practical_tech_0710.jpg", detailLevel: "main", note: "展示科技信息的可视化传播。" }
+      { id: "A7", title: "0710 实用黑科技", src: "assets/a_people_daily/a07_practical_tech_0710.jpg", detailLevel: "main", note: "展示科技信息的可视化传播。" },
+      { id: "A8", title: "宋词里的福建系列总览", src: "assets/a_people_daily/a08_songci_fujian_series.jpg", detailLevel: "support", note: "总结型图，展示传统文化系列的整体视觉。" },
+      { id: "A9", title: "清凉福地 · 冠豸山", src: "assets/a_people_daily/a09_qingliang_fudi_single.png", detailLevel: "support", note: "地域文旅议题的单张作品。" }
     ]
   },
   {
     id: "human-museum",
-    title: "人类博物馆：复杂历史知识的公众化表达",
+    title: "人类博物馆：从内容策划到公众参与",
     group: "B",
     role: "设计师 / 讲解员",
-    period: "2024.09 - 至今",
-    logic: "馆内权威资料 -> 核心信息提取 -> 内容层级梳理 -> 视觉风格规划 -> 图文物料输出",
+    period: "2024.09—至今",
+    logic: "资料理解 → 内容整理 → 视觉设计 → 现场应用",
     oneLine:
-      "将文物知识、历史材料和活动传播需求转化为清晰、有层次、适合公众理解和传播的图文物料。",
+      "参与选题、内容组织、活动策划与视觉设计，让馆藏内容进入展览、互动与传播现场。",
     responsibility:
       "根据科普展板、线上宣传及活动物料等不同设计需求，在馆内权威资料范围内提取核心信息、梳理内容层级，规划视觉风格、版式结构与图文关系，并参与日常公益及预约讲解。",
     keyActions: [
@@ -214,7 +215,7 @@ const portfolioCases = [
     title: "鼓浪屿故宫文创：地域文化的产品化落地",
     group: "D",
     role: "项目设计",
-    period: "2024.09 - 至今",
+    period: "2024.09—至今",
     logic: "地域文化提炼 -> 系列主题 -> 主视觉构思 -> 产品信息排版 -> 工艺优化 -> 门店销售",
     oneLine:
       "围绕鼓浪屿地域文化及两处场馆特色，提炼建筑与历史文化元素，推动首批文创商品进入批量生产和销售场景。",
@@ -267,13 +268,6 @@ const portfolioCases = [
       { id: "C2", title: "推送数据表", path: "E:\\视觉影像\\创意设计部\\主任团工作\\创意设计部2023述职 汪之韵\\12.15-6.24数据.xls", note: "可作为参与推送数量与传播效果证据。" }
     ],
     images: [
-      { id: "C3", title: "青媒回忆录长图", src: "assets/c_xmu_media/c03_media_memory_longform_01.jpg", detailLevel: "main", note: "展示长图叙事和视觉节奏组织。" },
-      { id: "C4", title: "毕业礼盒推送封面", src: "assets/c_xmu_media/c04_graduation_gift_cover.png", detailLevel: "main", note: "作为文创项目传播入口。" },
-      { id: "C5", title: "毕业礼盒日历本体", src: "assets/c_xmu_media/c05_calendar_body.png", detailLevel: "support", note: "展示产品内容本体。" },
-      { id: "C6", title: "毕业礼盒打卡单", src: "assets/c_xmu_media/c06_checkin_card.png", detailLevel: "support", note: "展示配套物料和使用场景。" },
-      { id: "C9", title: "吧唧蓝黄款样机", src: "assets/c_xmu_media/c09_badge_blue_yellow_mockup.png", detailLevel: "support", note: "作为校园文创补充，不作为主讲图。" },
-      { id: "C11", title: "年度长图开头", src: "assets/c_xmu_media/c11_year_review_opening.png", detailLevel: "main", note: "展示大型内容开场、信息组织和叙事基调。" },
-      { id: "C12", title: "年度长图大封面 2", src: "assets/c_xmu_media/c12_year_review_cover_02.png", detailLevel: "main", note: "展示内容运营中的封面判断与传播入口设计。" },
       { id: "C13", title: "厦大青年 2022 年度报告", src: "assets/c_xmu_media/c13_xmu_annual_report.png", detailLevel: "main", note: "阅读 1.0 万，赞 323。", link: "https://mp.weixin.qq.com/s/DGIpp092yuqByXNLMku6SA" },
       { id: "C14", title: "毕业季礼盒传播", src: "assets/c_xmu_media/c14_graduation_gift_article.png", detailLevel: "main", note: "阅读 2.2 万，赞 252。", link: "https://mp.weixin.qq.com/s/RamXHPI1r7KwtNcs2AIhRQ" },
       { id: "C15", title: "二十大主题头像框", src: "assets/c_xmu_media/c15_20th_congress_avatar_frame.png", detailLevel: "main", note: "限量 2000 个，阅读 2530。", link: "https://mp.weixin.qq.com/s/fHhPlN7NAnLG8OMiekmVgA" },
@@ -286,7 +280,7 @@ const portfolioCases = [
     title: "党支部宣传：党建主题与社区服务的图文转化",
     group: "F",
     role: "厦门大学艺术学院研究生第一党支部宣传委员",
-    period: "2024.09 - 至今",
+    period: "2024.09—至今",
     logic: "党建主题 -> 政策内容 -> 项目亮点 -> 宣传文案 -> 图文素材 -> 活动协同",
     oneLine:
       "围绕党建主题与社区服务项目，撰写宣传文案、设计推送内容和活动物料，支撑支部宣传与对外展示。",
