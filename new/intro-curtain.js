@@ -23,8 +23,10 @@
  document.body.style.overflow='hidden';main.inert=true;shell.inert=true;
  overlay.querySelector('button').addEventListener('click',finish);addEventListener('keydown',escape);addEventListener('pagehide',finish);reduced.addEventListener('change',finish);
  deadline=setTimeout(finish,7200);
- (async()=>{await Promise.race([Promise.all([document.fonts.ready,...[...overlay.querySelectorAll('img')].map(img=>img.decode().catch(()=>{}))]),new Promise(r=>setTimeout(r,1000))]);if(done)return;
- type.querySelectorAll('.intro-type>span').forEach((line,i)=>animations.push(line.animate([{clipPath:'inset(100% 0 0 0)',transform:'translateY(7px)'},{clipPath:'inset(0% 0 0 0)',transform:'translateY(0)'}],{duration:1250,delay:i*140,easing:'cubic-bezier(.22,1,.36,1)',fill:'both'})));
+ (async()=>{await Promise.all([document.fonts.ready,Promise.race([Promise.all([...overlay.querySelectorAll('img')].map(img=>img.decode().catch(()=>{}))),new Promise(r=>setTimeout(r,1500))])]);if(done)return;
+ clearTimeout(deadline);deadline=setTimeout(finish,5500);layoutConnections();
+ type.querySelectorAll('.intro-type>span').forEach((line,i)=>animations.push(line.animate([{opacity:0,transform:'translateY(7px)'},{opacity:1,transform:'translateY(0)'}],{duration:1250,delay:i*140,easing:'cubic-bezier(.22,1,.36,1)',fill:'both'})));
+ overlay.querySelectorAll('.intro-topline,.intro-baseline').forEach(el=>animations.push(el.animate([{opacity:0},{opacity:1}],{duration:900,easing:'ease-out',fill:'both'})));
  type.querySelectorAll('.intro-fragment').forEach((image,i)=>animations.push(image.animate([{opacity:0,transform:'translateY(7px)'},{opacity:1,transform:'translateY(0)'}],{duration:1300,delay:100+i*90,easing:'cubic-bezier(.22,1,.36,1)',fill:'both'})));
  type.querySelectorAll('.intro-editor-note,.intro-detail,.intro-signature,.intro-seal,.intro-side-note').forEach((el,i)=>animations.push(el.animate([{opacity:0,transform:'translateY(6px)'},{opacity:1,transform:'translateY(0)'}],{duration:1100,delay:380+i*80,easing:'ease-out',fill:'both'})));
  threads.forEach((path,i)=>animations.push(path.animate([{strokeDasharray:'1',strokeDashoffset:'1'},{strokeDasharray:'1',strokeDashoffset:'0'}],{duration:1050,delay:300+i*180,easing:'ease-in-out',fill:'both'})));
@@ -32,6 +34,7 @@
  svg.querySelectorAll('.node-dot').forEach((dot,i)=>animations.push(dot.animate([{r:'2.5px'},{r:'4px'},{r:'2.5px'}],{duration:700,delay:900+i*180,fill:'both'})));
  animations.push(type.animate([{transform:'scale(1.018)'},{transform:'scale(1)'}],{duration:2600,easing:'cubic-bezier(.22,1,.36,1)',fill:'forwards'}));
  // The opening, a short paper corridor, and the homepage share one vertical scene.
+ overlay.classList.add('intro-ready');
  const exitAt=2200,duration=1100,easing='cubic-bezier(.6,0,.2,1)';
  const timing={delay:exitAt,duration,easing,fill:'both'};
  const gap=Math.min(280,innerHeight*.28),travel=innerHeight+gap;
