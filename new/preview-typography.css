@@ -1,0 +1,32 @@
+/* Five semantic levels; OFL fonts are self-hosted with their license texts. */
+@font-face{font-family:"Portfolio Serif";src:url("assets/fonts/editorial/noto-serif-sc.ttf") format("truetype");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Portfolio Sans";src:url("assets/fonts/editorial/noto-sans-sc.ttf") format("truetype");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Portfolio WenKai";src:url("assets/fonts/editorial/wenkai.ttf") format("truetype");font-weight:400;font-display:swap}
+:root{--serif:"Portfolio Serif",serif;--sans:"Portfolio Sans",sans-serif;--display-font:var(--serif);--lead-font:var(--serif);--lead-weight:500;--display-weight:900}
+body[data-font="book"]{--lead-font:"Portfolio WenKai",var(--serif);--lead-weight:400}
+body[data-font="modern"]{--display-font:var(--sans);--display-weight:800}
+body{font-family:var(--sans);font-size:15px;font-weight:400;padding-bottom:110px;font-synthesis:none}
+/* Display / identity and chapter opening */
+.hero-heading h1,.museum-opening h2,footer h2{font-family:var(--display-font);font-weight:var(--display-weight);line-height:1.18;letter-spacing:-.025em}
+.hero-heading h1{font-size:clamp(88px,10.2vw,154px)}
+.hero-heading h1 span{font-family:Georgia,serif;font-size:clamp(30px,3.5vw,52px);font-weight:400;line-height:1.35;margin-top:20px}
+.museum-opening h2{font-size:clamp(48px,6.4vw,92px)}.wordmark{font-family:var(--serif);font-weight:800}
+/* Section / contrasting serif and sans subheadings */
+.section-heading h2,.case-heading h4{font-family:var(--serif);font-weight:700;line-height:1.35;letter-spacing:0}
+.section-heading h2{font-size:clamp(32px,3vw,44px)}.work-opening .section-heading h2{font-size:clamp(40px,4.3vw,62px)}.case-heading h4{font-size:clamp(34px,3.5vw,50px)}
+.compact h3{font-family:var(--sans);font-size:clamp(23px,2.2vw,30px);font-weight:650;line-height:1.5}
+/* Lead / a deliberate pause before the supporting detail */
+.hero-statement,.intro-copy .intro-lead,.overview-text>p:first-child,.process-images>p{font-family:var(--lead-font);font-weight:var(--lead-weight);line-height:1.65;letter-spacing:.025em}
+.hero-statement{font-size:27px}.intro-copy .intro-lead{font-size:25px}.overview-text>p:first-child{font-size:25px}.project-summary>p{font:500 23px/1.7 var(--serif)}
+.subtitle{font:500 17px/1.7 var(--sans);color:var(--muted);margin-top:12px}
+/* Body / comfortable sans text, independent of display font choice */
+.intro-copy>p:not(.intro-lead),.case-heading>div:last-child>p:not(.roles),.editorial-points dd,.overview-text .secondary{font:400 15px/1.95 var(--sans);letter-spacing:.01em}
+.education h3{font:600 19px/1.6 var(--sans)}.draft-row h5,.small-heading h5{font:650 15px/1.6 var(--sans)}.draft-row p{font:400 13px/1.85 var(--sans)}.editorial-points dt{font:650 13px/1.8 var(--sans)}
+.metrics dt{font-family:Georgia,serif;font-size:60px}.metrics small{font:500 12px/1 var(--sans)}
+/* Metadata / small labels remain visually subordinate */
+.micro,.chapter-label{font:550 11px/1.7 var(--sans);letter-spacing:.07em}.roles,.project-summary dl>div,.summary-detail,.profile-note{font:400 13px/1.85 var(--sans)}
+.role-label{font-size:11px;font-weight:650}.education small,.metrics dd,figcaption,.image-note{font:400 12px/1.7 var(--sans)}.topic-tags li{font:500 11px/1.5 var(--sans)}.text-link{font:550 13px/1.5 var(--sans)}
+.font-trial{position:fixed;z-index:90;bottom:16px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:18px;padding:10px 12px 10px 20px;max-width:calc(100% - 24px);background:#faf9f6;border:1px solid #c6c0b8;border-radius:16px;box-shadow:0 5px 30px #2e2b281c;font:12px/1.5 var(--sans)}
+.font-trial-label{white-space:nowrap}.font-trial-label small{display:block;color:#716b64;font-size:10px}.font-options{display:flex;gap:6px}.font-options button{font:12px/1.5 var(--sans);border:1px solid #c6c0b8;border-radius:25px;background:transparent;color:#2e2b28;padding:9px 14px;cursor:pointer;white-space:nowrap}.font-options button[aria-pressed="true"]{background:#2e2b28;color:#faf9f6;border-color:#2e2b28}.font-options button:focus-visible{outline:2px solid #716b64;outline-offset:3px}
+@media(max-width:700px){body{padding-bottom:130px}.font-trial{width:calc(100% - 24px);flex-direction:column;gap:7px;padding:10px;border-radius:12px;bottom:10px}.font-trial-label{display:flex;gap:10px;align-items:center}.font-options{width:100%}.font-options button{flex:1;font-size:11px;padding:8px}.hero-heading h1{font-size:clamp(72px,19vw,128px)}.hero-heading h1 span{font-size:34px}.hero-statement,.intro-copy .intro-lead,.overview-text>p:first-child{font-size:22px}.museum-opening h2{font-size:clamp(38px,10vw,60px)}.compact h3{font-size:23px}.project-summary>p{font-size:21px}.intro-copy>p:not(.intro-lead),.case-heading>div:last-child>p:not(.roles),.editorial-points dd{font-size:14px}.project-summary dl>div{font-size:12px}.metrics dt{font-size:48px}}
+@media print{.font-trial{display:none}body{padding-bottom:0}}
