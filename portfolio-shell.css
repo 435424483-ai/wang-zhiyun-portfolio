@@ -132,3 +132,57 @@ html::-webkit-scrollbar-button,.index-panel::-webkit-scrollbar-button{display:no
 .index-collapse-inner{min-height:0;overflow:hidden;opacity:0;transition:opacity 220ms ease}.index-collapse.is-expanded>.index-collapse-inner{opacity:1}
 .index-backdrop{opacity:0;transition:opacity 280ms ease}.index-backdrop.is-visible{opacity:1}
 @media(prefers-reduced-motion:reduce){.index-panel,.index-chevron svg,.index-collapse,.index-collapse-inner,.index-backdrop{transition:none!important}.index-closed .index-panel{transform:none}.index-panel{transform:none}}
+
+/* Comfortable editorial hierarchy; project list stays open. */
+.index-panel{padding-inline:22px}
+.index-caption{font-size:9px;letter-spacing:.1em}
+.index-group{padding-block:17px}
+.index-primary{grid-template-columns:25px minmax(0,1fr) 12px;gap:10px}
+.index-primary>span:first-child{font-size:13px}
+.index-primary>span:nth-child(2){font-size:20px;line-height:1.55;font-weight:500}
+.index-primary small{font-size:8px;letter-spacing:.1em;margin-top:4px}
+.index-work-group>.index-primary{padding-right:0}
+.index-project{margin-top:12px;padding-top:12px;font-size:14px}
+.index-project>a{grid-template-columns:25px minmax(0,1fr);gap:10px;padding-right:20px;font-weight:500;line-height:1.7;overflow-wrap:anywhere}
+.index-project>a::before{width:25px;height:25px;font-size:14px}
+.index-project.is-current-project>a{color:var(--ink)}
+.index-project.is-current-project>a::before{border-color:#736352;color:#4b4032;background:transparent;transform:rotate(-7deg)}
+.index-children{margin:10px 0 0 12px;padding-left:22px;gap:2px;font-size:12px}
+.index-children a{padding-block:6px;line-height:1.6;overflow-wrap:anywhere}
+.index-children a[aria-current]{font-size:12px}
+.index-chevron{top:11px;width:22px;height:28px;opacity:.38;transition:opacity 220ms ease}
+.index-chevron svg{width:10px;height:10px;stroke-width:1.25;transition:transform 240ms cubic-bezier(.22,.61,.36,1)}
+.index-project:hover>.index-chevron,.index-chevron:focus-visible,.index-chevron[aria-expanded=true]{opacity:.75}
+.index-collapse{transition:grid-template-rows 240ms cubic-bezier(.22,.61,.36,1),visibility 0s linear 240ms}
+.index-collapse.is-expanded{transition:grid-template-rows 240ms cubic-bezier(.22,.61,.36,1),visibility 0s}
+.index-collapse-inner{transition:opacity 200ms ease}
+@media(min-width:1101px) and (max-width:1399px){
+ .index-panel{padding-inline:16px}.index-primary{gap:7px}.index-primary>span:nth-child(2){font-size:19px}
+ .index-project>a{gap:7px;font-size:13px}.index-children{padding-left:18px}
+}
+@media(max-width:700px){
+ .index-group{padding-block:15px}.index-project{padding-top:12px;margin-top:12px}
+ .index-project>a{min-height:30px}.index-chevron{height:32px;top:11px}
+}
+@media(prefers-reduced-motion:reduce){.index-chevron,.index-collapse,.index-collapse-inner{transition:none!important}}
+
+/* Compact, closely related type sizes across the three index levels. */
+.index-panel{padding:18px 20px 16px}
+.index-top{padding-bottom:10px}.index-caption{margin-top:13px}
+.index-primary>span:first-child,.index-primary>span:nth-child(2),
+.index-project>a,.index-project>a::before,.index-children a,.index-children a[aria-current]{font-family:var(--sans);font-style:normal}
+.index-primary>span:nth-child(2){font-size:14px;line-height:1.5;font-weight:500}
+.index-primary>span:first-child{font-size:12px}
+.index-primary small{font-size:7px;line-height:1.4;margin-top:2px}
+.index-group{padding-block:10px}
+.index-project{margin-top:7px;padding-top:7px}
+.index-project>a{font-size:13px;line-height:1.5;min-height:22px;gap:8px}
+.index-project>a::before{font-size:12px;width:23px;height:23px}
+.index-children{margin-top:5px;padding-left:20px;gap:0}
+.index-children a,.index-children a[aria-current]{font-size:12px;line-height:1.45;padding-block:2px}
+.index-children a[aria-current]::before{top:10px}
+.index-chevron{top:5px;height:26px}
+.index-bottom{font-size:9px;padding-top:10px;line-height:1.6}
+.index-bottom>a{margin-top:7px}
+@media(min-width:1101px) and (max-width:1399px){.index-panel{padding-inline:16px}.index-primary>span:nth-child(2){font-size:14px}}
+@media(max-width:700px){.index-group{padding-block:10px}.index-project{margin-top:7px;padding-top:7px}.index-project>a{min-height:24px}.index-children a{padding-block:3px}.index-chevron{top:4px;height:28px}}

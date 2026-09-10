@@ -64,7 +64,7 @@
     const candidates = new Set();
     const add = element => {
       if (!element || !element.getClientRects().length || element.closest('[hidden]')) return;
-      if (element.matches('script,style,dialog') || element.matches('.gulangyu-opening-rule')) return;
+      if (element.matches('script,style,dialog') || element.matches('.gulangyu-opening-rule,.contact-rule')) return;
       // Preserve existing visual groups, including their accompanying captions.
       const children = [...element.children].filter(e=>!e.matches('script,style'));
       if (children.length && !element.matches('figure,button,p,h1,h2,h3,h4,dl') &&

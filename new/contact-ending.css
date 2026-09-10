@@ -1,0 +1,15 @@
+/* Contact only; reuse the existing dark footer and site typography. */
+#contact.contact-ending{padding-block:0 24px;min-height:0;height:auto}
+#contact .contact-rule{position:relative;height:1px;background:#615a53}
+#contact .contact-rule svg{position:absolute;left:0;top:-.5px;width:64px;height:2px;overflow:visible;pointer-events:none}
+#contact .contact-rule path{fill:none;stroke:#987950;stroke-width:1.25;stroke-linecap:round}
+#contact .contact-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:40px;padding-block:48px 36px;align-items:start}
+#contact h2{font-family:var(--display-font);font-size:clamp(30px,3.2vw,44px);line-height:1.35;margin:0;letter-spacing:0}
+#contact .contact-introduction>p{font:16px/1.75 var(--sans);color:#d4cec6;margin-top:18px}
+#contact .contact-details{display:flex;flex-direction:column;align-items:flex-start;gap:9px;min-width:0}
+#contact .contact-name{font:500 18px/1.5 var(--serif)}
+#contact .contact-email{font:500 clamp(18px,1.8vw,24px)/1.5 var(--sans);overflow-wrap:anywhere;max-width:100%}
+#contact .contact-send{font:14px/1.7 var(--sans);text-decoration:underline;text-underline-offset:5px;margin-top:4px}
+#contact .contact-phone{font:12px/1.6 var(--sans);color:#bcb5ab;margin-top:7px}
+#contact .contact-colophon{font:10px/1.6 var(--sans);letter-spacing:.06em;color:#bcb5ab;margin:0}
+@media(max-width:700px){#contact.contact-ending{padding-bottom:20px}#contact .contact-layout{grid-template-columns:minmax(0,1fr);gap:28px;padding-block:32px 28px}#contact h2{font-size:30px}#contact .contact-introduction>p{font-size:15px;margin-top:14px}#contact .contact-rule svg{width:36px}}
