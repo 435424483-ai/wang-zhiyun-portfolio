@@ -1,0 +1,48 @@
+/* MAZOO: short editorial relationships, scoped to the existing project. */
+#mazoo .mazoo-character-composition{display:block;margin-top:24px}
+.mazoo-character-diagram{position:relative;max-width:900px;margin:auto;aspect-ratio:900/440}
+#mazoo .mazoo-diagram-portrait{width:26%;margin:0 auto}
+.mazoo-design-lines{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;fill:none;stroke:#9caaa2;stroke-width:1}
+.mazoo-design-note{position:absolute;width:26%;background:var(--paper)}
+.mazoo-design-note.face{left:0;top:34%}.mazoo-design-note.dress{right:0;top:60%}.mazoo-design-note.symbol{right:0;top:16%}
+#mazoo .mazoo-design-note h5{font:600 17px/1.5 var(--sans);margin:0;color:var(--ink)}
+#mazoo .mazoo-design-note p{font:400 14px/1.7 var(--sans);margin:6px 0 0;color:var(--muted)}
+.mazoo-design-colors{position:absolute;left:0;bottom:8%;display:flex;gap:12px;padding:0;margin:0;list-style:none}
+.mazoo-design-colors li{font:13px/1.5 var(--sans)}.mazoo-design-colors i{display:block;width:28px;height:20px;margin-bottom:6px}
+#mazoo .mazoo-character-views{max-width:760px;margin:28px auto 0}
+#mazoo .mazoo-day-intro{display:block}
+.mazoo-direction-map{margin-top:18px;font:15px/1.7 var(--sans)}
+.mazoo-direction-root{font-weight:600}.mazoo-direction-map ul{list-style:none;margin:12px 0 0 8px;padding:0 0 0 20px;border-left:1px solid var(--line)}
+.mazoo-direction-map li{position:relative;margin:0;padding:7px 0}.mazoo-direction-map li:before{content:'';position:absolute;left:-20px;top:50%;width:12px;border-top:1px solid var(--line)}
+#mazoo .mazoo-voice-story .mazoo-account{max-width:230px;margin-top:24px}
+#mazoo .mazoo-content-results{display:block;margin-top:28px;padding-top:18px}
+#mazoo .mazoo-inline-data{display:flex;flex-wrap:wrap;gap:10px 24px;max-width:none;font:600 17px/1.7 var(--sans)}
+#mazoo .mazoo-product-lines{gap:28px;position:relative;margin-top:18px;border-top:1px solid var(--line);padding-top:16px}
+#mazoo .mazoo-product-lines>div,#mazoo .mazoo-product-notes>div{position:relative;min-width:0}
+#mazoo .mazoo-product-lines>div+div:before,#mazoo .mazoo-product-notes>div+div:before{content:'→';position:absolute;left:-23px;top:0;color:var(--muted);font:14px/1.6 var(--sans)}
+#mazoo .mazoo-product-lines h5,#mazoo .mazoo-product-notes h5{font:600 16px/1.6 var(--sans);color:var(--ink)}
+#mazoo .mazoo-product-lines p,#mazoo .mazoo-product-notes p{font:400 14px/1.7 var(--sans);color:var(--muted);margin:8px 0 0}
+.mazoo-structure-image{display:block;width:100%;height:150px;border:0;background:transparent;padding:0;margin:14px 0 0;cursor:zoom-in}
+.mazoo-structure-image img{width:100%;height:100%;object-fit:contain;object-position:left center}
+#mazoo .mazoo-product-notes{grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+#mazoo .mazoo-product-group-heading{align-items:start}
+#mazoo .mazoo-product-group-heading p{margin:0}
+#mazoo figcaption{margin-top:8px;font-size:13px;line-height:1.6}
+@media(max-width:800px){.mazoo-character-diagram{max-width:640px}.mazoo-design-note{width:28%}#mazoo .mazoo-design-note h5{font-size:15px}#mazoo .mazoo-design-note p{font-size:13px}.mazoo-design-colors{gap:7px}.mazoo-design-colors li{font-size:12px}.mazoo-design-colors i{width:22px}#mazoo .mazoo-product-lines{gap:22px}#mazoo .mazoo-product-notes{gap:22px}}
+@media(max-width:600px){.mazoo-character-diagram{aspect-ratio:auto;min-height:320px;display:grid;grid-template-columns:42% 1fr;column-gap:22px;row-gap:14px;align-items:center}#mazoo .mazoo-diagram-portrait{width:100%;grid-column:1;grid-row:1/4}.mazoo-design-lines{display:none}.mazoo-design-note{position:relative!important;inset:auto!important;width:auto;background:none;grid-column:2}.mazoo-design-note:before{content:'';position:absolute;width:28px;left:-30px;top:16px;border-top:1px solid #9caaa2}.mazoo-design-note.face{grid-row:1}.mazoo-design-note.dress{grid-row:3}.mazoo-design-note.symbol{grid-row:2}.mazoo-design-colors{position:static;grid-column:1/-1;justify-content:center;gap:24px}.mazoo-design-colors i{width:30px}#mazoo .mazoo-character-views{margin-top:24px}#mazoo .mazoo-product-lines{grid-template-columns:1fr;gap:26px}#mazoo .mazoo-product-lines>div{display:grid;grid-template-columns:1fr 110px;column-gap:14px}#mazoo .mazoo-product-lines h5,#mazoo .mazoo-product-lines p{grid-column:1}.mazoo-structure-image{grid-column:2;grid-row:1/3;height:100px;margin:0}#mazoo .mazoo-product-lines>div+div:before{content:'↓';left:0;top:-25px}#mazoo .mazoo-product-notes{grid-template-columns:1fr;gap:24px}#mazoo .mazoo-product-notes>div+div:before{content:'↓';left:0;top:-23px}#mazoo .mazoo-inline-data{font-size:15px;gap:8px 16px}}
+/* Content voice: results lead, directions and evidence share an aligned grid. */
+#mazoo .mazoo-voice{grid-template-columns:minmax(0,.8fr) minmax(0,2fr);gap:24px 32px}
+.mazoo-voice-heading{grid-column:1/-1}
+#mazoo .mazoo-voice-heading .mazoo-content-results{margin-top:16px;padding:0;border:0}
+#mazoo .mazoo-voice-heading .mazoo-inline-data{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));max-width:680px;gap:24px;margin:0}
+#mazoo .mazoo-inline-data>span{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+#mazoo .mazoo-inline-data strong{font:700 32px/1.25 var(--sans);color:var(--ink)}
+#mazoo .mazoo-inline-data small{font:400 14px/1.6 var(--sans);color:var(--muted)}
+#mazoo .mazoo-voice .mazoo-direction-map{margin-top:0}
+#mazoo .mazoo-voice-art{grid-template-columns:repeat(2,minmax(0,1fr));max-width:none;gap:24px}
+#mazoo .mazoo-voice-art .mazoo-content-image{aspect-ratio:0.72;display:flex;align-items:flex-start}
+#mazoo .mazoo-voice-art img{width:100%;height:100%;object-fit:contain;object-position:top}
+#mazoo .mazoo-voice-art>figure{max-width:none}
+@media(max-width:800px){#mazoo .mazoo-voice{grid-template-columns:1fr;gap:24px}#mazoo .mazoo-voice-story{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}#mazoo .mazoo-voice-story .mazoo-account{margin:0;max-width:260px}}
+@media(max-width:600px){#mazoo .mazoo-voice-heading .mazoo-inline-data{gap:12px}#mazoo .mazoo-inline-data>span{display:block}#mazoo .mazoo-inline-data strong{display:block;font-size:28px}#mazoo .mazoo-inline-data small{display:block;font-size:12px;margin-top:4px}#mazoo .mazoo-voice-story{grid-template-columns:1fr;gap:20px}#mazoo .mazoo-voice-art{grid-template-columns:1fr;gap:24px}#mazoo .mazoo-voice-art .mazoo-content-image{aspect-ratio:auto}#mazoo .mazoo-voice-art img{height:auto}}
+#mazoo .mazoo-product-fabric>.mazoo-product-notes{margin-top:28px;padding-top:18px;border-top:1px solid var(--line)}

@@ -1,0 +1,33 @@
+/* Personal explorations: the shared project measure, with a compact opening. */
+.personal-explorations{padding-top:72px;padding-bottom:64px;background:var(--paper);color:var(--ink)}
+.personal-opening{margin-bottom:32px}
+.personal-opening .project-meta{gap:18px;font:500 11px/1.5 var(--sans);letter-spacing:.08em;color:var(--muted)}
+.personal-opening h2{margin:24px 0 12px;font:800 64px/1.2 var(--serif);letter-spacing:0}
+.personal-opening .personal-subtitle{margin:0 0 24px;font:400 20px/1.5 var(--sans);color:var(--muted)}
+.personal-opening .gulangyu-opening-rule{background:var(--line)}
+.personal-explorations figure{margin:0;min-width:0}
+.personal-explorations figcaption{margin-top:8px;font:400 13px/1.5 var(--sans);color:var(--muted)}
+.personal-pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.26fr);gap:24px;align-items:start;margin-top:20px}
+.personal-pair+.personal-pair{margin-top:28px}
+.personal-pair-reverse{grid-template-columns:minmax(0,2.13fr) minmax(0,1fr)}
+.personal-pair-reverse figure:first-child{grid-column:2;grid-row:1}.personal-pair-reverse figure:last-child{grid-column:1;grid-row:1}
+.personal-image{display:block;width:100%;border:0;padding:0;background:transparent;cursor:zoom-in}
+.personal-image img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;filter:none;opacity:1}
+.personal-motion-section{margin-top:36px}
+.personal-motion-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:24px;align-items:start;max-width:880px;margin:20px 0 0}
+.personal-video-frame{background-position:center;background-size:contain;background-repeat:no-repeat}
+.personal-video-frame video{display:block;width:100%;height:auto;object-fit:contain}
+.personal-video-caption{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.personal-motion-toggle{border:0;background:none;padding:4px 0;color:var(--muted);font:400 12px/1.5 var(--sans);cursor:pointer;flex-shrink:0}
+.personal-motion-toggle:hover{color:var(--ink)}
+.personal-image:focus-visible,.personal-motion-toggle:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+.personal-motion.is-static video{visibility:hidden}.personal-motion.is-static .personal-motion-toggle{visibility:hidden}
+@media(max-width:1024px){.personal-opening h2{font-size:54px}.personal-explorations{padding-top:64px}.personal-pair,.personal-motion-grid{gap:20px}}
+@media(max-width:700px){.personal-explorations{padding-top:44px;padding-bottom:40px}.personal-opening h2{font-size:40px;margin-top:20px}.personal-opening .personal-subtitle{font-size:17px}.personal-opening .project-meta{font-size:9px;flex-wrap:wrap;gap:6px 16px}.personal-pair,.personal-pair-reverse,.personal-motion-grid{grid-template-columns:minmax(0,1fr);gap:24px}.personal-pair-reverse figure:first-child,.personal-pair-reverse figure:last-child{grid-column:auto;grid-row:auto}.personal-pair+.personal-pair{margin-top:24px}.personal-motion-section{margin-top:32px}.personal-explorations figcaption{font-size:13px}}
+@media print{.personal-motion-toggle{display:none}.personal-video-frame video{visibility:hidden}}
+/* Photography follows the motion selections, within the same content measure. */
+.personal-photography{margin-top:36px}
+.personal-photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:20px;align-items:start}
+.personal-photo-grid>figure:last-child{grid-column:1/-1}
+@media(max-width:1024px){.personal-photo-grid{gap:20px}}
+@media(max-width:700px){.personal-photography{margin-top:32px}.personal-photo-grid{grid-template-columns:minmax(0,1fr);gap:24px}}

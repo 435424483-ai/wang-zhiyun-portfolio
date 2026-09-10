@@ -1,46 +1,27 @@
-/* Motion is enabled by JS so the content remains visible without scripting. */
-.motion-ready .preview-reveal{
-  opacity:0;
-  transform:translate3d(0,24px,0);
-  transition:opacity 720ms ease,transform 820ms cubic-bezier(.22,1,.36,1);
-}
+/* Shared entry animation is controlled by preview-motion.js; content is visible by default. */
+.preview-route-card{width:calc((100% - 24px)/3);height:300px;flex:none;padding:0;border:0;background:transparent;cursor:pointer;}
+.preview-route-card-inner{position:relative;display:block;width:100%;height:100%;}
 
-.motion-ready .preview-reveal.is-in-view{opacity:1;transform:translate3d(0,0,0)}
-
-.motion-ready .preview-slide-item{
-  opacity:0;
-  transform:translate3d(0,28px,0);
-  transition:
-    opacity 620ms ease calc(var(--motion-index)*85ms),
-    transform 760ms cubic-bezier(.22,1,.36,1) calc(var(--motion-index)*85ms);
-}
-
-.preview-route-card{width:calc((100% - 24px)/3);height:300px;flex:none;padding:0;border:0;background:transparent;cursor:pointer;perspective:1100px}
-.preview-route-card-inner{position:relative;display:block;width:100%;height:100%;transform-style:preserve-3d;transition:transform 650ms cubic-bezier(.22,1,.36,1)}
-.preview-route-card.is-flipped .preview-route-card-inner{transform:rotateX(180deg)}
-.preview-route-card-face{position:absolute;inset:0;display:block;backface-visibility:hidden;-webkit-backface-visibility:hidden}
-.preview-route-card-back{transform:rotateX(180deg)}
+.preview-route-card-face{position:absolute;inset:0;display:block;transition:opacity 220ms ease}
+.preview-route-card-back{opacity:0}
+.preview-route-card.is-flipped .preview-route-card-back{opacity:1}
+.preview-route-card.is-flipped .preview-route-card-front{opacity:0}
 .with-shell .route-cards .preview-route-card img{width:100%;height:100%;object-fit:contain}
 .preview-route-card:focus-visible{outline:2px solid currentColor;outline-offset:5px}
-
-.motion-ready .preview-slide-track.is-in-view>.preview-slide-item{
-  opacity:1;
-  transform:translate3d(0,0,0);
-}
 
 @media(max-width:700px){
   .with-shell :is(.board-thumbs,.route-cards,.collection-grid){
     display:flex;
     overflow-x:auto;
     overscroll-behavior-x:contain;
-    scroll-snap-type:x mandatory;
+    scroll-snap-type:none;
     scroll-behavior:smooth;
     scrollbar-width:thin;
     scrollbar-color:#a89c89 transparent;
   }
   .with-shell .board-thumbs .work-image{flex:0 0 58%;scroll-snap-align:start}
-  .with-shell .route-cards .preview-route-card{flex:0 0 68%;width:68%;scroll-snap-align:center;scroll-snap-stop:always}
-  .with-shell .collection-grid>figure{flex:0 0 min(82%,340px);scroll-snap-align:start;scroll-snap-stop:always}
+  .with-shell .route-cards .preview-route-card{flex:0 0 68%;width:68%;scroll-snap-align:center;scroll-snap-stop:normal}
+  .with-shell .collection-grid>figure{flex:0 0 min(82%,340px);scroll-snap-align:start;scroll-snap-stop:normal}
 }
 
 @media(prefers-reduced-motion:reduce){

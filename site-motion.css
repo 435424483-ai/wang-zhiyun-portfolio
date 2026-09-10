@@ -1,0 +1,20 @@
+/* Timing only: keep existing typography, colors, geometry and opening untouched. */
+:root{--content-motion-duration:650ms;--content-motion-ease:cubic-bezier(.22,.61,.36,1);--feedback-motion-duration:220ms}
+main > :not(#home) :is(a,button,.button-label,.button-icon),
+.portfolio-shell :is(a,button,.index-chevron svg){transition-duration:var(--feedback-motion-duration);transition-timing-function:ease-out}
+main > :not(#home) .text-link:hover .button-icon{transform:none}
+main > :not(#home) .series-tab:hover::after{transform:none}
+main > :not(#home) .series-panel.is-entering{animation:content-panel-enter var(--content-motion-duration) var(--content-motion-ease)}
+@keyframes content-panel-enter{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.venue-preview-dialog[open]{animation:preview-fade-in 220ms ease-out}
+.venue-preview-dialog[open]::backdrop{animation:preview-fade-in 220ms ease-out}
+.venue-preview-dialog[open].is-closing,.venue-preview-dialog[open].is-closing::backdrop{animation:preview-fade-out 220ms ease-out forwards;pointer-events:none}
+@keyframes preview-fade-in{from{opacity:0}to{opacity:1}}
+@keyframes preview-fade-out{from{opacity:1}to{opacity:0}}
+.venue-preview-dialog button{transition-duration:220ms;transition-timing-function:ease-out}
+@media(max-width:700px){@keyframes content-panel-enter{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}}
+@media(prefers-reduced-motion:reduce){
+ main > :not(#home) *,main > :not(#home) *::before,main > :not(#home) *::after,
+ .portfolio-shell *,.index-backdrop,.venue-preview-dialog[open],.venue-preview-dialog[open]::backdrop{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+ .preview-route-card-face{transition:none}
+}

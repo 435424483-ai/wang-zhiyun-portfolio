@@ -1,0 +1,21 @@
+/* Shared Gulangyu opening structure; MAZOO supplies its project palette. */
+#mazoo .mazoo-project-opening{--gy-brick:#D8909D;--gy-paper:#2D2526;--gy-muted:#6F4F54;--gy-gold:#FFF5EE;min-height:0;background:#D8909D;color:#2D2526}
+.mazoo-project-opening .project-meta{color:#2D2526}
+.mazoo-project-opening .gulangyu-project-id>span{font:600 10px/1.4 var(--sans);letter-spacing:.07em}
+.mazoo-project-opening .gulangyu-project-id small,.mazoo-project-opening .gulangyu-opening-top time{color:#6F4F54}
+.mazoo-project-title-row{display:flex;align-items:baseline;gap:24px;margin:42px 0 12px}
+#mazoo .mazoo-project-opening [data-mazoo-type=project]{font-family:var(--mz-heading-font);font-size:80px;font-weight:900;line-height:1.12;letter-spacing:0;margin:0;color:#2D2526}
+.mazoo-project-opening .mazoo-project-category{font:500 36px/1.4 var(--mz-heading-font);margin:0;color:#2D2526}
+.mazoo-project-opening .mazoo-project-description{font:400 16px/1.7 var(--sans);color:#6F4F54;margin:0 0 28px}
+.mazoo-project-opening .gulangyu-opening-rule{background:rgba(45,37,38,.22)}
+#mazoo .mazoo-project-opening .gulangyu-opening-narrative>[data-mazoo-type=body]{font:400 17px/1.7 var(--sans);color:#2D2526;max-width:34em;margin:0}
+#mazoo .mazoo-project-opening .gulangyu-opening-narrative>[data-mazoo-type=body]+[data-mazoo-type=body]{margin-top:14px}
+.mazoo-project-opening .gulangyu-opening-label{color:#6F4F54;margin:0 0 10px}
+.mazoo-project-opening .gulangyu-opening-facts dl>div{border-color:rgba(45,37,38,.22)}
+.mazoo-project-opening .gulangyu-opening-facts dt{color:#6F4F54}.mazoo-project-opening .gulangyu-opening-facts dd{color:#2D2526}.mazoo-project-opening .gulangyu-opening-facts strong{font-weight:700}
+.mazoo-project-opening .mazoo-opening-photo{width:100%;max-width:320px;margin:18px 0 0}.mazoo-project-opening .mazoo-opening-photo img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain}.mazoo-project-opening .mazoo-opening-photo button{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
+#mazoo .mazoo-project-opening figcaption{font:400 12px/1.6 var(--sans);color:#6F4F54;margin-top:8px}
+#mazoo .mazoo-project-opening .mazoo-subchapter-next{color:#2D2526;margin-top:28px}#mazoo .mazoo-project-opening .mazoo-subchapter-next>span{color:#6F4F54}
+@media(max-width:1024px){#mazoo .mazoo-project-opening [data-mazoo-type=project]{font-size:72px}.mazoo-project-opening .mazoo-project-category{font-size:32px}}
+@media(max-width:900px){.mazoo-project-opening .gulangyu-opening-bottom{gap:24px}}
+@media(max-width:700px){.mazoo-project-opening .gulangyu-opening-top{flex-direction:row;gap:16px}.mazoo-project-title-row{display:block;margin-top:28px}#mazoo .mazoo-project-opening [data-mazoo-type=project]{font-size:48px}.mazoo-project-opening .mazoo-project-category{font-size:28px;margin-top:8px}.mazoo-project-opening .mazoo-project-description{font-size:14px;margin-bottom:22px}#mazoo .mazoo-project-opening .gulangyu-opening-narrative>[data-mazoo-type=body]{font-size:16px}.mazoo-project-opening .mazoo-opening-photo{max-width:320px}}

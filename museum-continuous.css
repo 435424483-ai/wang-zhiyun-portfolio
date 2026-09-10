@@ -76,3 +76,13 @@ body{padding-bottom:0}
  .collection .section-heading{grid-template-columns:1fr;gap:16px}
  .collection-ai-note{justify-self:start;font-size:12px}
 }
+/* Keep the route artwork together; editorial notes sit below the group. */
+#museum .route-cards .preview-route-card:has(img[src$="pink_front.png"]){display:none}
+#museum .route-cards{justify-content:center;gap:24px;min-height:0}
+#museum .route-reading-note{margin:14px 0 10px;max-width:34em;font:400 17px/1.75 var(--sans);color:var(--ink)}
+#museum .process-images>p{display:none}
+#museum-boards .template-identity .case-category{display:none}
+#museum-boards .template-identity .subtitle{margin-top:12px;padding-left:0;font:400 18px/1.7 var(--lead-font)}
+#museum-boards .template-identity .subtitle::before{content:none}
+#museum-boards .subtitle-continuation{display:inline;padding-left:0}
+@media(max-width:700px){#museum .route-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;overflow:visible}#museum .route-cards .preview-route-card{width:100%;height:auto;aspect-ratio: .63;min-width:0}#museum .route-reading-note{font-size:16px}}

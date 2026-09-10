@@ -1,0 +1,60 @@
+/* Local alignment pass: preserve each MAZOO layout and its existing media. */
+#mazoo{--mazoo-group-gap:32px;--mz-layout-gap:24px}
+#mazoo>section{padding-block:36px}
+#mazoo>section>.mazoo-inner{max-width:1280px;margin-inline:auto;min-width:0}
+#mazoo :is(.mazoo-character,.mazoo-content,.mazoo-products,.mazoo-market) .mazoo-inner>header{padding-bottom:18px;border-bottom:1px solid var(--line)}
+#mazoo :is(.mazoo-character,.mazoo-content,.mazoo-products,.mazoo-market) .mazoo-inner>header [data-mazoo-type="body"]{margin-top:12px;margin-bottom:0;max-width:44em}
+#mazoo :is(.mazoo-character-composition,.mazoo-day,.mazoo-product-system,.mazoo-market-scene){margin-top:24px}
+#mazoo .mazoo-character-diagram{max-width:760px}
+#mazoo .mazoo-character-views{max-width:760px;margin-top:24px}
+#mazoo .mazoo-day-title{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 18px}
+#mazoo .mazoo-day-title .mazoo-motion-credit{margin:0}
+#mazoo .mazoo-scenes{gap:24px;margin-top:16px}
+#mazoo .mazoo-voice{column-gap:24px;row-gap:20px;padding-top:20px}
+#mazoo .mazoo-voice-art .mazoo-content-image{display:block;aspect-ratio:auto}
+#mazoo .mazoo-voice-art img{height:auto}
+#mazoo .mazoo-voice-art{gap:24px}
+#mazoo .mazoo-voice-heading .mazoo-inline-data{max-width:none;padding-top:14px;border-top:1px solid var(--line);gap:24px}
+#mazoo .mazoo-voice-story .mazoo-account{max-width:100%;margin-top:18px}
+#mazoo .mazoo-product-group-heading{grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:24px}
+#mazoo :is(.mazoo-product-series,.mazoo-product-fabric-images){gap:24px;margin-top:16px}
+#mazoo .mazoo-product-blessings{margin-top:32px;padding-top:20px;border-top:1px solid var(--line)}
+#mazoo .mazoo-product-fabric{margin-top:32px}
+#mazoo .mazoo-product-lines{gap:24px}
+#mazoo .mazoo-product-lines>div{display:flex;flex-direction:column}
+#mazoo .mazoo-product-lines .mazoo-structure-image{margin-top:12px}
+#mazoo .mazoo-product-lines p{min-height:2.8em;margin-top:6px}
+#mazoo .mazoo-product-notes{gap:24px}
+#mazoo .mazoo-product-notes>div+div:before{content:none}
+#mazoo .mazoo-product-notes>div+div{border-left:1px solid var(--line);padding-left:16px}
+#mazoo .mazoo-operations-grid{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:24px}
+#mazoo .mazoo-operations-paper{padding:20px}
+#mazoo .mazoo-inventory{margin-top:24px;padding-top:18px;border-top:1px solid var(--line)}
+#mazoo .mazoo-operations-paper .mazoo-operations-closing{font-size:15px;margin:18px 0 0;padding-top:14px;border-top:1px solid var(--line);max-width:none}
+#mazoo .mazoo-market-intro{max-width:44em;margin-top:12px}
+#mazoo .mazoo-market-photo-pair{gap:24px;margin-top:16px}
+#mazoo .mazoo-market-photo-pair p{margin-top:10px}
+#mazoo .mazoo-market-posters{margin-top:24px;gap:20px}
+#mazoo .mazoo-market-outcomes{margin-top:28px}
+#mazoo .mazoo-market-ending{margin-top:18px}
+#mazoo .mazoo-subchapter-next{margin-top:28px}
+@media(max-width:1100px){#mazoo .mazoo-product-group-heading{grid-template-columns:1fr;gap:10px}#mazoo .mazoo-product-notes{grid-template-columns:repeat(2,minmax(0,1fr))}#mazoo .mazoo-product-notes>div:nth-child(odd){padding-left:0;border-left:0}}
+@media(max-width:800px){#mazoo .mazoo-operations-grid{grid-template-columns:1fr}#mazoo .mazoo-operations-scene{max-width:480px;width:100%}#mazoo .mazoo-voice-story .mazoo-account{max-width:260px}#mazoo .mazoo-character-diagram{max-width:640px}}
+@media(max-width:600px){
+ #mazoo>section{padding-block:24px}
+ #mazoo :is(.mazoo-character,.mazoo-content,.mazoo-products,.mazoo-market) .mazoo-inner>header{padding-bottom:16px}
+ #mazoo .mazoo-character-diagram{min-height:0}
+ #mazoo .mazoo-design-note p{margin-top:4px}
+ #mazoo .mazoo-scenes{gap:18px}
+ #mazoo .mazoo-voice-heading .mazoo-inline-data{gap:12px}
+ #mazoo .mazoo-voice-art{gap:20px}
+ #mazoo .mazoo-voice-art>figure{max-width:none}
+ #mazoo .mazoo-product-lines>div{display:grid;grid-template-columns:minmax(0,1fr) 110px}
+ #mazoo .mazoo-product-lines p{min-height:0}
+ #mazoo .mazoo-product-lines .mazoo-structure-image{margin-top:0}
+ #mazoo .mazoo-product-notes{grid-template-columns:1fr;gap:16px}
+ #mazoo .mazoo-product-notes>div+div{padding:12px 0 0;border-left:0;border-top:1px solid var(--line)}
+ #mazoo .mazoo-operations-paper{padding:18px 16px}
+ #mazoo .mazoo-market-posters{gap:20px 14px}
+ #mazoo .mazoo-subchapter-next{margin-top:24px}
+}

@@ -13,7 +13,7 @@
 .party-comic-sequence{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:start;margin-top:26px}
 .party-full-link{font:14px/1.7 var(--sans);color:var(--ink);padding:0 0 3px;border:0;border-bottom:1px solid var(--line);background:transparent;cursor:pointer;margin-top:16px}
 .party-series{border-top:1px solid var(--line);margin-top:30px;padding-top:22px}.party-series figure{max-width:440px}
-.index-project>a[href="#party-branch"]::before{content:'E'}
+.index-project>a[href="#party-branch"]::before{content:'F'}
 @media(max-width:1000px){.party-comic-sequence{grid-template-columns:1fr;max-width:580px}.party-case-intro{grid-template-columns:minmax(0,1fr) 150px}.party-opening .gulangyu-opening-bottom{gap:28px}}
 @media(max-width:600px){.party-case-intro{grid-template-columns:1fr;gap:18px}.party-case-intro>figure{width:150px}.party-opening .gulangyu-opening-title{font-size:40px}.party-cases{padding-block:28px 34px}}
 @media print{.party-comic-sequence figure{break-inside:avoid}}

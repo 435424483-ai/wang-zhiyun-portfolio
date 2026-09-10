@@ -26,3 +26,5 @@
   #youth-experience-sharing .youth-course-excerpts{margin-top:28px;padding-top:18px}
 }
 @media print{#youth-experience-sharing .youth-teaching-slides figure{break-inside:avoid}}
+#youth-experience-sharing .youth-course-heading{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 16px}
+#youth-experience-sharing .youth-course-heading>p{margin:0;font:400 14px/1.6 var(--sans);color:var(--muted)}

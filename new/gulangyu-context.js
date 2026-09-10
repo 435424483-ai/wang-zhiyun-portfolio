@@ -10,8 +10,17 @@
   const caption = dialog.querySelector('figcaption');
   const close = dialog.querySelector('.venue-preview-close');
   let opener = null;
-  const shut = () => { if (dialog.open) dialog.close(); };
+  let closeTimer;
+  const shut = () => {
+    if (!dialog.open) return;
+    clearTimeout(closeTimer);
+    if(matchMedia('(prefers-reduced-motion:reduce)').matches){dialog.close();return;}
+    dialog.classList.add('is-closing');
+    closeTimer=setTimeout(()=>dialog.close(),220);
+  };
+  dialog.addEventListener('cancel',event=>{event.preventDefault();shut();});
   buttons.forEach(button => button.addEventListener('click', () => {
+    clearTimeout(closeTimer);dialog.classList.remove('is-closing');
     opener = button;
     dialog.classList.toggle('party-reading-preview', button.dataset.previewReading === 'true');
       dialog.classList.remove('party-reading-zoom');
@@ -28,6 +37,7 @@
     if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) shut();
   });
   dialog.addEventListener('close', () => {
+    clearTimeout(closeTimer);dialog.classList.remove('is-closing');
     image.removeAttribute('src');
     opener?.focus();
     opener = null;
