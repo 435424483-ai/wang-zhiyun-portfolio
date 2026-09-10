@@ -1,0 +1,20 @@
+(() => {
+ const track=document.querySelector('.pa-track');if(!track)return;
+ const items=[...track.children],prev=document.querySelector('.pa-prev'),next=document.querySelector('.pa-next'),status=document.querySelector('.pa-position');
+ const reduced=matchMedia('(prefers-reduced-motion:reduce)');
+ const max=()=>Math.max(0,track.scrollWidth-track.clientWidth);
+ const positions=()=>items.map(item=>Math.min(max(),item.offsetLeft-items[0].offsetLeft));
+ const index=()=>{const pos=positions();let found=0;pos.forEach((x,i)=>{if(Math.abs(x-track.scrollLeft)<Math.abs(pos[found]-track.scrollLeft))found=i});return found};
+ const update=()=>{prev.disabled=track.scrollLeft<2;next.disabled=track.scrollLeft>=max()-2;const n=next.disabled?items.length:index()+1;status.textContent=String(n).padStart(2,'0')+' / '+String(items.length).padStart(2,'0')};
+ const move=dir=>{const pos=positions(),x=track.scrollLeft;const target=dir>0?pos.find(v=>v>x+3):pos.slice().reverse().find(v=>v<x-3);track.scrollTo({left:target??(dir>0?max():0),behavior:reduced.matches?'instant':'smooth'})};
+ prev.addEventListener('click',()=>move(-1));next.addEventListener('click',()=>move(1));
+ track.addEventListener('keydown',e=>{if(e.target!==track)return;if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();move(e.key==='ArrowRight'?1:-1)}});
+ let start=null,dragged=false,suppressUntil=0;
+ track.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse'||e.button!==0)return;start={x:e.clientX,y:e.clientY,left:track.scrollLeft,id:e.pointerId};dragged=false});
+ track.addEventListener('pointermove',e=>{if(!start)return;const dx=e.clientX-start.x,dy=e.clientY-start.y;if(!dragged&&Math.abs(dx)>8&&Math.abs(dx)>Math.abs(dy)){dragged=true;track.setPointerCapture(start.id);track.classList.add('is-dragging')}if(dragged){e.preventDefault();track.scrollLeft=start.left-dx}});
+ const end=()=>{if(!start)return;if(dragged){suppressUntil=performance.now()+350;if(track.hasPointerCapture(start.id))track.releasePointerCapture(start.id)}start=null;track.classList.remove('is-dragging');update()};
+ window.addEventListener('pointerup',end);track.addEventListener('pointercancel',end);track.addEventListener('lostpointercapture',()=>{start=null;track.classList.remove('is-dragging')});
+ track.addEventListener('click',e=>{if(performance.now()<suppressUntil){e.preventDefault();e.stopImmediatePropagation()}},true);
+ track.addEventListener('dragstart',e=>e.preventDefault());
+ track.addEventListener('scroll',update,{passive:true});new ResizeObserver(update).observe(track);update();
+})();

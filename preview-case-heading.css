@@ -1,0 +1,16 @@
+/* Selected A layout: one shared alignment grid and a compact role block. */
+.case-heading{grid-template-columns:280px minmax(0,1fr);gap:36px;align-items:start}
+.case-heading>div:last-child{max-width:650px}
+.case-heading .roles{margin-top:12px;padding-top:0}
+.case-heading .role-tags{margin-top:7px}
+.case-heading>div:last-child>p.case-copy-label{font:500 12px/1.6 var(--sans);color:var(--muted);margin-bottom:12px}
+.core>.section-heading{grid-template-columns:280px minmax(0,1fr);gap:36px}
+.case-heading .case-category{display:flex;align-items:center;gap:7px;font:500 11px/1.5 var(--sans);letter-spacing:.08em}
+.case-category .case-number{display:inline-grid;place-items:center;background:transparent;color:var(--ink);width:27px;height:27px;border-radius:50%;border:1px solid var(--line);font:italic 19px/1 Georgia,serif}
+.case-category .case-type{border:1px solid var(--line);padding:4px 12px;border-radius:99px}
+.case-heading h4{margin-top:14px;margin-bottom:14px;position:relative;width:fit-content}
+.case-heading h4::after{content:"";display:block;width:30px;height:1px;background:#a6957b;margin-top:17px}
+.case-heading .subtitle{margin-top:0;font:400 21px/1.65 var(--lead-font);letter-spacing:.045em}.title-inflection{display:inline-block;transform:translateY(3px);margin-left:.05em}.subtitle-continuation{display:block;padding-left:1.15em}.copy-emphasis{font-weight:600}.case-heading>div:last-child>p:not(.case-copy-label){line-height:2;letter-spacing:.025em}.case-heading .case-copy-label{letter-spacing:.08em}
+@media(max-width:1050px){.case-heading,.core>.section-heading{grid-template-columns:230px minmax(0,1fr);gap:24px}}
+@media(max-width:700px){.case-heading,.core>.section-heading{grid-template-columns:1fr;gap:22px}.case-heading .roles{margin-top:12px}}
+

@@ -1,0 +1,23 @@
+/* MAZOO type contract. New pages opt into data-mazoo-type by semantic role. */
+#mazoo{--mz-project-size:60px;--mz-chapter-size:42px;--mz-group-size:24px;--mz-body-size:18px;--mz-caption-size:13px;--mz-result-size:30px;--mz-heading-font:"Portfolio Serif","Noto Serif SC",serif;--mz-text-font:"Portfolio Sans","Noto Sans SC",sans-serif;--mz-text:#49443f;--mz-muted:#716b64}
+#mazoo [data-mazoo-type="project"]{font:900 var(--mz-project-size)/1.2 var(--mz-heading-font);letter-spacing:0;margin:0 0 20px}
+#mazoo .mazoo-subtitle{font:500 21px/1.5 var(--mz-text-font)}
+#mazoo [data-mazoo-type="chapter"]{font-family:var(--mz-heading-font);font-size:var(--mz-chapter-size)!important;font-weight:700;line-height:1.3;letter-spacing:0;margin:0;color:var(--ink);text-wrap:pretty}
+#mazoo [data-mazoo-type="group"]{font-family:var(--mz-heading-font);font-size:var(--mz-group-size)!important;font-weight:700;line-height:1.4;letter-spacing:0;margin:0;color:var(--ink);text-wrap:pretty}
+#mazoo [data-mazoo-type="group"]::before{width:14px;height:9px;margin-right:6px}
+#mazoo [data-mazoo-type="body"]{font:400 var(--mz-body-size)/1.7 var(--mz-text-font);color:var(--mz-text);max-width:44em;text-wrap:pretty}
+#mazoo [data-mazoo-type="body"] strong{font-weight:600;color:inherit;background:none;text-decoration:none;font-size:inherit}
+#mazoo [data-mazoo-type="body"]+[data-mazoo-type="body"]{margin-top:14px}
+#mazoo [data-mazoo-type="group"]+[data-mazoo-type="body"]{margin-top:12px}
+#mazoo [data-mazoo-type="eyebrow"],#mazoo .mazoo-label{font:500 13px/1.6 var(--mz-text-font);color:#ae4b40;margin:0 0 12px;letter-spacing:.03em}
+#mazoo [data-mazoo-type="caption"]{font:400 var(--mz-caption-size)/1.6 var(--mz-text-font);color:var(--mz-muted);margin-top:8px}
+#mazoo .mazoo-character-reason+.mazoo-character-reason{margin-top:16px;padding-top:16px}
+#mazoo .mazoo-character-palette li{font:500 13px/1.5 var(--mz-text-font)}
+#mazoo .mazoo-character-palette small{font:400 13px/1.5 var(--mz-text-font);color:var(--mz-muted)}
+#mazoo .mazoo-results>p:first-child{font:400 14px/1.6 var(--mz-text-font);gap:8px 20px}
+#mazoo .mazoo-results strong{font:700 var(--mz-result-size)/1.3 var(--mz-text-font);color:var(--ink);background:none;text-decoration:none}
+#mazoo .mazoo-results .mazoo-award{font:400 13px/1.6 var(--mz-text-font);color:var(--mz-muted)}
+#mazoo .mazoo-facts dt,#mazoo .mazoo-facts dd{font-family:var(--mz-text-font)}
+@media(max-width:1100px){#mazoo{--mz-project-size:56px;--mz-chapter-size:38px;--mz-group-size:22px;--mz-body-size:17px;--mz-result-size:28px}}
+@media(max-width:800px) and (min-width:601px){#mazoo .mazoo-character-reason+.mazoo-character-reason{margin-top:0;padding-top:0}}
+@media(max-width:600px){#mazoo{--mz-project-size:40px;--mz-chapter-size:30px;--mz-group-size:20px;--mz-body-size:16px;--mz-result-size:28px}#mazoo .mazoo-subtitle{font-size:19px}#mazoo .mazoo-character-reason+.mazoo-character-reason{margin-top:0;padding-top:16px}#mazoo .mazoo-label{font-size:11px}#mazoo .mazoo-character-palette small{font-size:13px}}

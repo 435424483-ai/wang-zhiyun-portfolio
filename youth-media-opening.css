@@ -1,0 +1,24 @@
+/* Reuse project B's opening grid and information structure, scoped to D. */
+.youth-opening.gulangyu-opening{
+  --gy-brick:#35594f;--gy-paper:#faf9f6;--gy-muted:#cbd8d1;--gy-gold:#e6cb83;
+  min-height:0;background:#35594f;color:#faf9f6;
+}
+.youth-opening .project-pill{font:600 16px/1.6 var(--sans);color:#e6cb83;background:transparent;border-color:rgba(203,216,209,.4);letter-spacing:0}
+.youth-opening .gulangyu-opening-title{font-family:var(--serif);font-size:clamp(42px,5.6vw,80px);font-weight:900;line-height:1.2;letter-spacing:0;white-space:normal;flex-wrap:wrap;gap:0 .2em}
+.youth-opening .gulangyu-opening-rule{background:rgba(203,216,209,.35)}
+.youth-opening .gulangyu-opening-bottom{gap:clamp(28px,5vw,72px)}
+.youth-opening-summary{font:400 16px/1.78 var(--sans);color:#faf9f6;max-width:34em;margin:0;text-wrap:pretty}
+.youth-opening .gulangyu-opening-facts dl>div{border:0;grid-template-columns:64px minmax(0,1fr);gap:16px;padding:0 0 18px}
+.youth-opening .gulangyu-opening-facts dl>div:nth-child(3){border-top:1px solid rgba(203,216,209,.28);padding-top:18px}
+.youth-opening .gulangyu-opening-facts dt{font:400 13px/1.78 var(--sans);color:#cbd8d1;letter-spacing:0}
+.youth-opening .gulangyu-opening-facts dd{font:400 14px/1.78 var(--sans);color:#cbd8d1;text-wrap:pretty}
+.youth-opening .youth-opening-results dd{color:#faf9f6}
+.youth-opening-outcomes{margin-top:22px;padding-top:16px;border-top:1px solid rgba(203,216,209,.28)}
+.youth-opening-outcome-label{font:400 13px/1.78 var(--sans);color:#cbd8d1;margin:0 0 8px}
+.youth-opening-outcome-copy{font:400 14px/1.78 var(--sans);color:#faf9f6;margin:0;text-wrap:pretty}
+.youth-opening-result-note{font:400 14px/1.78 var(--sans);color:#cbd8d1;margin:.6em 0 0;text-wrap:pretty}
+@media(max-width:700px){
+  .youth-opening .project-pill{font-size:14px}
+  .youth-opening .gulangyu-opening-title{font-size:40px;margin:40px 0 32px}
+  .youth-opening .gulangyu-opening-bottom{gap:24px}
+}

@@ -1,0 +1,12 @@
+/* Both columns share actual grid rows, so alignment survives changes in copy length. */
+@media(min-width:701px){
+  .layout-a .case-body,.case-heading{row-gap:0;align-items:start}
+  .layout-a .identity,.layout-a .explanation,.case-heading>div{display:contents}
+  .layout-a .category,.case-heading .case-category{grid-column:1;grid-row:1;margin:0 0 16px}
+  .layout-a h4,.case-heading h4{grid-column:1;grid-row:2 / 4;margin:0;padding:0}
+  .layout-a .explanation>.copy-label,.case-heading>div:last-child>p.case-copy-label{grid-column:2;grid-row:2;margin:0 0 8px;align-self:start}
+  .layout-a .description,.case-heading>div:last-child>p:not(.case-copy-label){grid-column:2;grid-row:3;margin:0;max-width:650px}
+  .layout-a .subtitle,.case-heading .subtitle{grid-column:1;grid-row:4;margin:14px 0 0}
+  .layout-a .duties,.case-heading .roles{grid-column:2;grid-row:4;margin:14px 0 0;padding:0}
+  .layout-a .duties ul,.case-heading .role-tags{margin-top:7px}
+}

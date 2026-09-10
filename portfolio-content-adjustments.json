@@ -1,0 +1,363 @@
+{
+  "changes": {
+    "text-001": {},
+    "text-026": {
+      "html": "A / 人民日报数字传播",
+      "color": "rgb(42, 101, 147)",
+      "align": ""
+    },
+    "text-027": {},
+    "decor-1788777874026": {
+      "x": 24,
+      "y": 24,
+      "color": "#766a59"
+    },
+    "decor-1788777893113": {
+      "x": 24,
+      "y": 24,
+      "color": "#766a59"
+    },
+    "decor-1788777905177": {
+      "x": 24,
+      "y": 24,
+      "color": "#766a59"
+    },
+    "decor-1788777907849": {
+      "x": 58,
+      "y": 162,
+      "color": "#766a59"
+    },
+    "text-028": {
+      "html": "在主流媒体与政务传播语境中，<div>将政策、文化、产业与热点内容转化为<strong>清晰、有感染力的视觉作品。</strong></div>",
+      "color": "",
+      "align": ""
+    },
+    "text-029": {
+      "y": 0,
+      "fontSize": 13
+    },
+    "text-030": {
+      "fontSize": 13
+    },
+    "text-031": {
+      "fontSize": 13
+    },
+    "text-032": {
+      "fontSize": 13
+    },
+    "text-033": {
+      "fontSize": 13
+    },
+    "text-043": {
+      "width": 477,
+      "x": 31,
+      "y": -8
+    },
+    "text-044": {
+      "width": 370,
+      "x": 16
+    },
+    "text-046": {
+      "x": 44,
+      "y": 36,
+      "html": "<p data-pm-slice=\"1 1 []\">从新闻文本与产业资料中提炼核心信息，结合传播主题，将客观产业内容转化为更具生活感与情感温度的视觉语言，完成兼具信息传达与感染力的政务宣传海报。</p>",
+      "color": "",
+      "align": ""
+    },
+    "text-045": {
+      "x": 40,
+      "y": 36
+    },
+    "text-047": {
+      "x": 41,
+      "y": 44
+    },
+    "text-051": {
+      "x": 54,
+      "y": 53
+    },
+    "text-050": {
+      "x": 52,
+      "y": 54
+    },
+    "text-049": {
+      "x": 46,
+      "y": 54
+    },
+    "text-048": {
+      "x": 42,
+      "y": 54
+    },
+    "decor-1788778497794": {
+      "x": 541,
+      "y": 136,
+      "width": 622,
+      "color": "#766a59"
+    },
+    "text-042": {},
+    "copy-1788778528636": {
+      "x": 548,
+      "y": 232
+    },
+    "decor-1788778652987": {
+      "x": 24,
+      "y": 36,
+      "color": "#766a59"
+    },
+    "decor-1788778659675": {
+      "x": 24,
+      "y": 36,
+      "color": "#766a59"
+    },
+    "text-052": {},
+    "text-054": {},
+    "text-055": {},
+    "text-058": {
+      "html": "根据不同内容主题，<span style=\"font-size: clamp(23px, 2.2vw, 30px);\">匹配相应的视觉表达方式。</span>",
+      "color": "",
+      "align": "",
+      "width": 591,
+      "x": 12
+    },
+    "text-059": {
+      "x": -617,
+      "y": 36,
+      "width": 781,
+      "html": "以成熟的设计思维与内容判断应对不同主题，围绕传播重点整合并处理图像、字体与信息层级，使视觉表达与内容目标保持一致。",
+      "color": "",
+      "align": ""
+    },
+    "text-066": {},
+    "text-072": {
+      "fontSize": 15,
+      "y": 0
+    },
+    "text-069": {
+      "html": "「从单次设计到系列体系」",
+      "color": "",
+      "align": "",
+      "width": 436,
+      "x": 61,
+      "y": 3
+    },
+    "copy-1788779247501": {
+      "html": "具备将高频设计需求转化为稳定视觉体系的能力，能够提炼共性、建立可复用的设计流程，并针对不同内容灵活调整信息与画面，在持续输出中保持系列的一致性与设计效率。",
+      "color": "",
+      "align": "",
+      "bold": false,
+      "fontSize": 17,
+      "x": -387,
+      "y": 52,
+      "width": 801
+    },
+    "text-070": {
+      "x": 16,
+      "y": 13,
+      "fontSize": 13
+    },
+    "text-071": {
+      "fontSize": 15
+    },
+    "text-073": {
+      "fontSize": 15
+    },
+    "text-074": {
+      "fontSize": 15
+    },
+    "text-091": {
+      "width": 369,
+      "html": "通过日常讲解和现场交流，<div>了解观众如何接收文物信息。</div>",
+      "color": "",
+      "align": ""
+    },
+    "text-097": {
+      "width": 474
+    },
+    "text-098": {},
+    "text-099": {
+      "fontSize": 14
+    },
+    "text-100": {
+      "width": 191
+    },
+    "text-104": {},
+    "text-101": {
+      "fontSize": 14
+    },
+    "text-103": {
+      "fontSize": 14
+    },
+    "text-105": {
+      "fontSize": 14
+    },
+    "text-106": {
+      "fontSize": 14,
+      "html": "<span>01 / 讲解现场&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;香港国民教育学会文化交流团&nbsp; &nbsp; 48人&nbsp; &nbsp;&nbsp;</span>",
+      "color": "",
+      "align": ""
+    },
+    "text-107": {
+      "fontSize": 14,
+      "html": "<span>02 / 讲解现场&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 厦门大学社会与人类学院新生&nbsp; &nbsp;176人</span>",
+      "color": "",
+      "align": ""
+    },
+    "text-111": {
+      "x": 0,
+      "y": -4
+    },
+    "text-109": {
+      "x": -33,
+      "y": 39
+    },
+    "text-110": {
+      "x": 0,
+      "y": -42,
+      "fontSize": 50
+    },
+    "text-113": {
+      "y": 4,
+      "x": -12
+    },
+    "text-114": {
+      "x": -12,
+      "width": 706,
+      "html": "<strong class=\"copy-emphasis\">担任设计组组长，</strong>统筹设计思路与视觉规范，<div>将历史照片、人物故事和文字资料整理为一组连续展板。</div>",
+      "color": "",
+      "align": ""
+    },
+    "text-115": {
+      "x": -12
+    },
+    "text-116": {
+      "x": -12
+    },
+    "text-117": {
+      "x": -12
+    },
+    "text-118": {
+      "x": -12
+    },
+    "text-119": {
+      "x": -12
+    },
+    "text-121": {
+      "width": 361,
+      "html": "梳理文案、史实和视觉素材之间的关联，<div>将模糊需求拆分为可确认、可执行的画面与素材任务。</div>",
+      "color": "",
+      "align": ""
+    },
+    "text-120": {},
+    "text-133": {
+      "x": 0,
+      "y": 8
+    },
+    "text-134": {
+      "x": -4,
+      "width": 416,
+      "y": 8
+    },
+    "text-135": {},
+    "text-131": {
+      "html": "咔嚓！一起捕捉光影",
+      "color": "",
+      "align": ""
+    },
+    "text-132": {},
+    "text-140": {},
+    "text-143": {
+      "width": 409,
+      "html": "让观看文物、寻找展厅与现场盖章，<div>自然连成一次完整的逛馆体验。</div>",
+      "color": "",
+      "align": ""
+    },
+    "text-147": {},
+    "copy-1788780492978": {
+      "x": -216,
+      "y": -88,
+      "html": "部分作品使用AI进行辅助创作",
+      "color": "",
+      "align": "",
+      "fontSize": 13
+    },
+    "text-150": {
+      "y": -36
+    },
+    "text-151": {
+      "y": -36
+    },
+    "text-152": {
+      "y": -36
+    },
+    "text-153": {
+      "y": -36
+    }
+  },
+  "duplicates": [
+    {
+      "sourceId": "decor-1788778497794",
+      "id": "copy-1788778528636",
+      "html": "",
+      "style": "color: rgb(118, 106, 89) !important; translate: 541px 136px !important; width: 622px !important; max-width: none !important;"
+    },
+    {
+      "sourceId": "text-069",
+      "id": "copy-1788779247501",
+      "html": "系列模板，让高频内容保持一致",
+      "style": ""
+    },
+    {
+      "sourceId": "text-147",
+      "id": "copy-1788780492978",
+      "html": "馆藏内容的视觉延展",
+      "style": ""
+    }
+  ],
+  "decorations": [
+    {
+      "id": "decor-1788777874026",
+      "hostId": "main",
+      "kind": "label",
+      "html": "01 / NOTE"
+    },
+    {
+      "id": "decor-1788777893113",
+      "hostId": "main",
+      "kind": "dot",
+      "html": ""
+    },
+    {
+      "id": "decor-1788777905177",
+      "hostId": "main",
+      "kind": "dot",
+      "html": ""
+    },
+    {
+      "id": "decor-1788777907849",
+      "hostId": "people-daily",
+      "kind": "dot",
+      "html": ""
+    },
+    {
+      "id": "decor-1788778497794",
+      "hostId": "people-daily-case",
+      "kind": "line",
+      "html": ""
+    },
+    {
+      "id": "decor-1788778652987",
+      "hostId": "main",
+      "kind": "pill",
+      "html": "标签"
+    },
+    {
+      "id": "decor-1788778659675",
+      "hostId": "main",
+      "kind": "pill",
+      "html": "标签"
+    }
+  ],
+  "version": 3,
+  "page": "preview-content-editor.html",
+  "exportedAt": "2026-09-07T11:29:28.336Z"
+}

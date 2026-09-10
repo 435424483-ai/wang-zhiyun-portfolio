@@ -1,0 +1,27 @@
+.mazoo-character{background:var(--paper);color:var(--ink);padding-block:32px 36px}
+.mazoo-character .chapter-label{color:#ae4b40}
+.mazoo-character-intro,.mazoo-character-reason p,.mazoo-character-closing{font:16px/1.75 var(--sans);margin:12px 0 0;text-wrap:pretty}
+.mazoo-character-intro{max-width:48em}.mazoo-character strong{font-weight:600}
+.mazoo-character-composition{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:26px}
+.mazoo-character figure{margin:0;min-width:0}
+.mazoo-character-image{display:block;width:100%;padding:0;border:0;background:transparent;cursor:zoom-in}.mazoo-character-image img{display:block;width:100%;height:auto}
+.mazoo-character-views figcaption{font:12px/1.7 var(--sans);color:var(--muted);margin-top:8px}
+.mazoo-character-reasons{min-width:0}.mazoo-character-reason+.mazoo-character-reason{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.mazoo-character-palette{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;margin:14px 0 0;padding:0;list-style:none}
+.mazoo-character-palette li{display:flex;align-items:center;gap:8px;font:13px/1.5 var(--sans)}
+.mazoo-character-palette i{display:block;width:26px;height:26px;background:var(--swatch);flex-shrink:0}
+.mazoo-character-palette small{display:block;font:11px/1.5 var(--sans);color:var(--muted)}
+.mazoo-character-closing{margin-top:24px;max-width:48em}
+.mazoo-character-next{border-top:1px solid var(--line);padding-top:16px;margin-top:24px}.mazoo-character-next p{font:11px/1.6 var(--sans);color:#ae4b40;margin:0 0 6px}.mazoo-character-next>span{font:600 18px/1.5 var(--serif)}
+@media(max-width:1100px){.mazoo-character-composition{grid-template-columns:1.15fr 1fr;gap:24px}}
+@media(max-width:800px){.mazoo-character-composition{grid-template-columns:1fr;gap:22px}.mazoo-character-views{max-width:620px}.mazoo-character-reasons{display:grid;grid-template-columns:1fr 1fr;gap:20px}.mazoo-character-reason+.mazoo-character-reason{margin:0;padding:0;border:0}.mazoo-character-reason:last-child{grid-column:1/-1}.mazoo-character-palette{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:600px){.mazoo-character{padding-block:28px}.mazoo-character-reasons{grid-template-columns:1fr}.mazoo-character-reason+.mazoo-character-reason{padding-top:18px;border-top:1px solid var(--line)}.mazoo-character-palette{grid-template-columns:1fr 1fr}}
+@media print{.mazoo-character-composition{break-inside:avoid}}
+
+/* Compact design notes alongside the shared three-view artwork. */
+#mazoo-character .mazoo-character-reason p{margin-top:8px;line-height:1.7}
+#mazoo-character .mazoo-character-palette{margin-top:10px;gap:8px 14px}
+/* Keep the four character colors in one compact row at every width. */
+#mazoo-character .mazoo-character-palette{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+#mazoo-character .mazoo-character-palette li{display:flex;flex-direction:column;align-items:flex-start;gap:6px;min-width:0}
+#mazoo-character .mazoo-character-palette small{font-size:11px;line-height:1.5}

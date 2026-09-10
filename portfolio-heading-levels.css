@@ -1,0 +1,50 @@
+/* New portfolio only. Semantic opt-in: captions and step labels are excluded.
+   Portfolio Serif/Sans are the self-hosted Noto Serif SC/Noto Sans SC fonts. */
+main [data-heading-level="3"] {
+  font-family: "Portfolio Serif", "Noto Serif SC", serif;
+  font-size: 26px !important;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0;
+  color: var(--group-heading-color, #2e2b28);
+  margin: 0;
+  max-width: none;
+  text-wrap: pretty;
+}
+main [data-heading-level="3"] span { font: inherit; letter-spacing: inherit; color: inherit; }
+/* A small hand-drawn double stroke; decorative only, with no extra text. */
+main [data-heading-level="3"]::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 12px;
+  margin-right: 8px;
+  vertical-align: .08em;
+  background-color: var(--group-heading-mark, #a34e3b);
+  -webkit-mask: url("assets/ui/heading-hand-stroke.svg") center / contain no-repeat;
+  mask: url("assets/ui/heading-hand-stroke.svg") center / contain no-repeat;
+}
+main [data-heading-level="3"][data-heading-gap="copy"] + p { margin-top: 12px; }
+main [data-heading-level="3"][data-heading-gap="media"] + :is(figure, div) { margin-top: 18px; }
+main :is(.foundation-origin,.youth-memoir-subtitle,.approved-heading .subtitle) {
+  font-family: "Portfolio Sans", "Noto Sans SC", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+/* These components already provide the inter-column gap. */
+main .youth-gift-heading [data-heading-level="3"] { margin: 0; }
+main .ai-application-heading [data-heading-level="3"] { margin: 0; }
+main .youth-delivery-left:has(> [data-heading-level="3"]) { gap: 0; }
+/* Keep a single source of vertical grouping, rather than stacking margins. */
+main :is(.youth-memoir,.youth-feature,.youth-hand-drawn) { margin-top: 18px; padding-top: 18px; }
+main [data-chapter-heading="standard"] { font-size: 36px !important; }
+@media (max-width: 1100px) {
+  main [data-chapter-heading="standard"] { font-size: 30px !important; }
+  main [data-heading-level="3"] { font-size: 24px !important; }
+}
+@media (max-width: 600px) {
+  main [data-chapter-heading="standard"] { font-size: 28px !important; }
+  main [data-heading-level="3"] { font-size: 22px !important; }
+  main :is(.youth-memoir,.youth-feature,.youth-hand-drawn) { margin-top: 12px; padding-top: 14px; }
+}

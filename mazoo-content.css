@@ -1,0 +1,35 @@
+/* Continuous MAZOO chapters: shared editorial spacing, no viewport-height panels. */
+#mazoo{--mazoo-group-gap:32px}
+#mazoo .mazoo-character,#mazoo .mazoo-content{padding-block:36px}
+.mazoo-content{background:var(--paper);color:var(--ink)}
+.mazoo-content .chapter-label{color:#ae4b40}
+.mazoo-content p{font:16px/1.75 var(--sans);margin:12px 0 0;text-wrap:pretty}
+.mazoo-content strong{font-weight:600}
+.mazoo-content-heading>p:last-child{max-width:48em}
+.mazoo-content .chapter-label{font:11px/1.6 var(--sans);margin:0 0 12px}
+.mazoo-day{margin-top:24px}
+.mazoo-day-intro{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:28px;align-items:start}
+.mazoo-day-intro p{margin:0}
+.mazoo-scenes{display:grid;grid-template-columns:minmax(0,2.1fr) minmax(0,1fr);gap:22px;align-items:start;margin-top:20px}
+.mazoo-content figure{margin:0;min-width:0}
+.mazoo-scene-side{display:grid;gap:16px}
+.mazoo-scene-trigger,.mazoo-content-image{display:block;width:100%;border:0;padding:0;background:transparent;cursor:pointer}
+.mazoo-scene-trigger{aspect-ratio:16/9;overflow:hidden}
+.mazoo-scene-trigger video{display:block;width:100%;height:100%;object-fit:contain}
+.mazoo-scene-trigger:focus-visible{outline:2px solid #ae4b40;outline-offset:4px}
+.mazoo-content-image{cursor:zoom-in}.mazoo-content-image img{display:block;width:100%;height:auto}
+.mazoo-content figcaption{font:12px/1.7 var(--sans);color:var(--muted);margin-top:8px}
+.mazoo-content .mazoo-motion-hint{font:11px/1.6 var(--sans);color:var(--muted);margin-top:10px}
+.mazoo-voice{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.6fr);gap:28px;margin-top:var(--mazoo-group-gap);padding-top:24px;border-top:1px solid var(--line)}
+.mazoo-voice-art{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:20px;align-items:start}
+.mazoo-content-results{display:grid;grid-template-columns:minmax(0,1fr) 260px;align-items:center;gap:28px;margin-top:var(--mazoo-group-gap);padding-top:20px;border-top:1px solid var(--line)}
+.mazoo-content-results>p{margin:0;max-width:38em}
+#mazoo .mazoo-subchapter-next{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;font:13px/1.7 var(--sans);color:var(--muted);margin:32px 0 0}
+.mazoo-subchapter-next>span{font:11px/1.7 var(--sans);color:#ae4b40}
+.mazoo-scenes.is-reduced .mazoo-scene-trigger{cursor:default}
+.mazoo-scenes.is-reduced video{visibility:hidden}.mazoo-scenes.is-reduced .mazoo-scene-trigger{background:var(--scene-poster) center / contain no-repeat}
+@media(max-width:1100px){.mazoo-voice{grid-template-columns:1fr;gap:20px}.mazoo-voice-story p{max-width:46em}.mazoo-voice-art{max-width:720px}.mazoo-day-intro{grid-template-columns:1fr;gap:10px}}
+@media(max-width:600px){#mazoo .mazoo-character,#mazoo .mazoo-content{padding-block:24px}.mazoo-scenes{grid-template-columns:1fr;gap:18px}.mazoo-scene-side{grid-template-columns:1fr 1fr;gap:12px}.mazoo-content figcaption{font-size:11px}.mazoo-voice-art{grid-template-columns:1fr;max-width:360px;gap:24px}.mazoo-voice-art>figure:last-child{max-width:280px}.mazoo-content-results{grid-template-columns:1fr;gap:16px}.mazoo-account{max-width:260px}.mazoo-content .mazoo-voice{margin-top:32px}}
+@media print{.mazoo-scene-trigger video{visibility:hidden}.mazoo-scene-trigger{background:var(--scene-poster) center / contain no-repeat;print-color-adjust:exact}.mazoo-motion-hint{display:none}}
+
+#mazoo-content .mazoo-motion-credit{font:400 13px/1.7 var(--sans);color:var(--muted);margin:10px 0 0}

@@ -1,0 +1,9 @@
+.git
+.tmp
+.codex-build
+outputs
+design
+node_modules
+.env*
+production-manifest.json
+work

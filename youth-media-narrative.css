@@ -1,0 +1,35 @@
+/* Work narratives: 02 delivery and 04 teaching. */
+.youth-narrative-opening{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:28px;align-items:start}
+.youth-narrative-paper{padding:22px;background:#f3f1ed var(--display-board-texture);background-size:260px;border:1px solid #e1ddd5;box-shadow:0 2px 5px #2e2b2809;min-width:0}
+.youth-narrative-paper p,.youth-method-output>div>p,.youth-narrative-completion>p{font:16px/1.78 var(--sans);margin:0;text-wrap:pretty}
+.youth-narrative-paper p+p{margin-top:.6em}
+.youth-narrative-paper strong{font-weight:600}
+.youth-narrative-paper .youth-narrative-kicker{font:500 13px/1.7 var(--sans);color:var(--muted);margin:12px 0 8px}
+.youth-narrative-image{display:block;width:100%;padding:0;border:0;background:transparent;cursor:zoom-in}
+.youth-narrative-image img{display:block;width:100%;height:auto;object-fit:contain}
+.youth-work-narrative .youth-narrative-opening figure{max-width:477px;width:100%;margin:0}
+.youth-work-narrative h5,.youth-teaching-narrative h5{font:600 16px/1.5 var(--sans);margin:0 0 12px;color:var(--ink)}
+.youth-production-evidence{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:28px;margin-top:24px;padding-top:20px;border-top:1px solid var(--line);align-items:start}
+.youth-production-evidence>div{min-width:0}
+.youth-production-evidence>div:last-child figure{max-width:300px}
+.youth-narrative-completion{margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+.youth-narrative-completion>p{max-width:42em}
+.youth-work-narrative .youth-delivery-timeline{margin-top:16px;padding-top:0;border-top:0}
+.youth-work-narrative .youth-delivery-results{margin-top:18px;gap:28px}
+.youth-work-narrative .youth-delivery-results .youth-delivery-image{justify-content:flex-start}
+.youth-work-narrative figcaption,.youth-teaching-narrative figcaption,.youth-teaching-narrative .youth-course-caption{font:12px/1.7 var(--sans);color:var(--muted);margin:8px 0 0;text-align:left;text-wrap:pretty}
+.youth-work-narrative .youth-evidence-note,.youth-teaching-narrative .youth-evidence-note{font:14px/1.75 var(--sans);color:var(--muted);margin:8px 0 0;max-width:42em}
+.youth-lecture-years{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.youth-lecture-years li{border-top:1px solid var(--line);padding-top:12px;min-width:0}
+.youth-lecture-years time,.youth-method-output time{color:#776a59}
+.youth-teaching-narrative .youth-team-copy p{font:16px/1.78 var(--sans);margin:0}
+.youth-teaching-narrative .youth-team-copy p+p{margin-top:.6em}
+.youth-teaching-narrative .youth-team-image{aspect-ratio:auto}
+.youth-teaching-narrative .youth-team-image img{height:auto;object-fit:contain}
+.youth-method-output{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:28px;border-top:1px solid var(--line);margin-top:24px;padding-top:20px;align-items:start}
+.youth-method-examples{display:grid;grid-template-columns:1fr 1fr;gap:16px;min-width:0}
+.youth-method-examples img{max-height:230px;object-position:top left}
+.youth-method-examples .youth-course-caption{grid-column:1/-1;margin:0}
+@media(max-width:1100px){.youth-narrative-opening,.youth-method-output{grid-template-columns:1fr;gap:20px}.youth-narrative-paper .youth-team-copy{max-width:42em}.youth-lecture-years{max-width:760px}}
+@media(max-width:600px){.youth-narrative-paper{padding:18px 16px}.youth-production-evidence,.youth-lecture-years{grid-template-columns:1fr}.youth-production-evidence{gap:20px}.youth-method-examples{grid-template-columns:1fr}.youth-method-examples img{max-height:260px}.youth-narrative-paper #youth-teaching-title{font-size:28px!important}}
+@media print{.youth-narrative-paper{box-shadow:none}.youth-production-evidence figure,.youth-lecture-years li,.youth-method-examples figure{break-inside:avoid}}

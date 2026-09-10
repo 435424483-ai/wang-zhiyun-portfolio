@@ -1,0 +1,39 @@
+/* Chapter 02: narrative and evidence share a reading sequence. */
+#youth-calendar-restart{display:block}
+#youth-calendar-restart .youth-restart-summary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;max-width:68em;margin-top:20px;align-items:start}
+#youth-calendar-restart .youth-restart-summary p{margin:0;font:16px/1.78 var(--sans);text-wrap:pretty}
+#youth-calendar-restart .youth-restart-summary p+p{margin:0;padding-left:28px;border-left:1px solid var(--line)}
+.youth-gift-editorial .youth-gift-layout{margin-top:18px}
+.youth-gift-row{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.7fr);gap:28px;align-items:start}
+.youth-gift-editorial .youth-gift-copy p,.youth-delivery-editorial .youth-delivery-copy p,.youth-delivery-close>p{font:16px/1.78 var(--sans);margin:0;text-wrap:pretty}
+.youth-gift-editorial .youth-gift-copy{max-width:34em}
+.youth-gift-participation{margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+.youth-gift-editorial .youth-gift-materials{margin:0;padding:0;border:0;gap:14px}
+.youth-gift-editorial .youth-gift-primary{gap:18px}
+.youth-gift-editorial .youth-gift-primary .youth-gift-image{height:180px}
+.youth-delivery-editorial .youth-delivery-heading{grid-template-columns:minmax(0,.9fr) minmax(0,1.7fr);gap:28px;margin-top:18px}
+.youth-delivery-process-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
+.youth-delivery-editorial .youth-delivery-heading figure{margin:0}
+.youth-delivery-process-pair .youth-delivery-image{height:auto;align-items:flex-start}
+.youth-delivery-process-pair img{width:100%;max-height:280px;object-fit:contain;object-position:top}
+.youth-delivery-close{margin-top:24px;padding-top:18px;border-top:1px solid var(--line)}
+.youth-delivery-close>p{max-width:40em}
+.youth-delivery-close .youth-delivery-timeline{margin-top:16px;border-top:0;padding-top:0}
+@media(max-width:1100px){
+  #youth-calendar-restart .youth-restart-summary{gap:20px}
+  #youth-calendar-restart .youth-restart-summary p+p{padding-left:20px}
+  .youth-gift-row,.youth-delivery-editorial .youth-delivery-heading{grid-template-columns:1fr;gap:16px}
+  .youth-gift-editorial .youth-gift-copy,.youth-delivery-copy{max-width:40em}
+  .youth-delivery-process-pair img{max-height:260px}
+}
+@media(max-width:600px){
+  #youth-calendar-restart .youth-restart-summary{display:block;margin-top:16px}
+  #youth-calendar-restart .youth-restart-summary p+p{border:0;padding:0;margin-top:.6em}
+  .youth-gift-editorial .youth-gift-primary .youth-gift-image{height:170px}
+  .youth-gift-participation{margin-top:18px;padding-top:16px}
+  .youth-delivery-process-pair{grid-template-columns:1fr;gap:18px}
+  .youth-delivery-process-pair figure:first-child img{max-width:240px}
+  .youth-delivery-process-pair .youth-delivery-image{justify-content:flex-start}
+  .youth-delivery-process-pair img{max-height:none}
+}
+@media print{.youth-gift-row,.youth-delivery-process-pair figure{break-inside:avoid}}

@@ -1,0 +1,54 @@
+:root{
+  --display-board-gray:#e5e1d9;
+  --display-board-warm:#f4f1eb;
+  --display-board-texture:url("assets/textures/preview-paper-board.svg");
+  --display-board-light:linear-gradient(118deg,rgba(255,255,255,.26),transparent 38%,rgba(105,94,76,.035) 72%,transparent);
+}
+
+/* Paper belongs to the supporting board. The artwork itself is left untouched. */
+.with-shell :is(.board-main,.route-cards,.collection-grid>figure),
+.with-shell .board-thumbs .work-image{
+  background-color:var(--display-board-color,var(--display-board-gray));
+  background-image:var(--display-board-light),var(--display-board-texture);
+  background-size:auto,260px 260px;
+  border-radius:1px;
+  box-shadow:
+    inset 1px 1px rgba(255,255,255,.52),
+    inset -1px -1px rgba(91,80,63,.055),
+    1px 1px 0 #d8d2c7,
+    2px 2px 0 #d1cabd,
+    5px 7px 13px rgba(59,50,37,.13),
+    11px 17px 30px rgba(59,50,37,.055);
+}
+
+/* Reading-heavy groups sit closer to the page colour. */
+.with-shell .route-cards{
+  --display-board-color:var(--display-board-warm);
+  box-shadow:
+    inset 1px 1px rgba(255,255,255,.72),
+    inset -1px -1px rgba(91,80,63,.035),
+    1px 1px 0 #e2ddd3,
+    2px 2px 0 #ddd7cc,
+    4px 6px 12px rgba(59,50,37,.095),
+    9px 14px 26px rgba(59,50,37,.04);
+}
+
+.with-shell .board-thumbs img{
+  background-color:transparent;
+}
+
+.with-shell .collection-grid>figure{
+  padding:14px 14px 12px;
+}
+
+.with-shell .collection-grid>figure figcaption{
+  margin-top:0;
+}
+
+@media(max-width:700px){
+  .with-shell .collection-grid>figure{padding:10px 10px 9px}
+  .with-shell :is(.board-main,.route-cards,.collection-grid>figure),
+  .with-shell .board-thumbs .work-image{
+    box-shadow:inset 1px 1px rgba(255,255,255,.48),1px 1px 0 #d3ccbf,3px 5px 10px rgba(59,50,37,.12);
+  }
+}
