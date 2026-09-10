@@ -1,0 +1,52 @@
+.youth-restart{background:var(--paper);color:var(--ink);padding-block:36px 44px}
+.youth-restart-inner{max-width:1180px;margin-inline:auto}
+@media(min-width:1101px){.youth-restart-inner{width:min(100%,calc(100vw - var(--rail) - var(--index) - 2 * var(--gutter)))}}
+.youth-restart-heading{border-top:1px solid var(--line);padding-top:18px;display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:32px}
+.youth-restart .chapter-label{font-size:10px;white-space:normal;color:#776a59;margin-bottom:14px}
+.youth-restart h3{font:750 clamp(28px,2.8vw,40px)/1.45 var(--serif);letter-spacing:-.025em;text-wrap:balance}.youth-restart h3 span{display:inline-block}
+.youth-restart-subtitle{font:500 16px/1.8 var(--serif);color:var(--muted);margin-top:9px}
+.youth-restart-summary{font:14px/1.95 var(--sans);text-wrap:pretty;align-self:end}
+.youth-comparison{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,2fr);gap:26px;margin-top:26px;align-items:start}
+.youth-comparison h4{font:500 12px/1.8 var(--sans);margin-bottom:12px;color:var(--muted)}
+.youth-revised h4{color:var(--ink)}
+.youth-revised-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.youth-comparison figure{margin:0;min-width:0}
+.youth-image{display:block;padding:8px;width:100%;border:0;background:#f0ede6;cursor:zoom-in}
+.youth-image img{display:block;width:100%;height:auto;object-fit:contain}
+.youth-original .youth-image{max-width:200px}.youth-original .youth-image img{height:auto;max-height:200px;object-fit:contain}
+.youth-comparison figcaption{display:block;font:11px/1.8 var(--sans);color:var(--muted);margin-top:8px}
+.youth-comparison-note{font:13px/1.9 var(--sans);margin-top:18px;max-width:65em;text-wrap:pretty}
+@media(max-width:800px){.youth-restart-heading{grid-template-columns:1fr;gap:16px}.youth-restart-summary{font-size:13px}.youth-comparison{gap:16px}}
+.index-project>a[href="#youth-media"]::before{content:'D'}
+@media(max-width:560px){.youth-restart{padding-block:28px 34px}.youth-comparison{grid-template-columns:1fr;gap:22px}.youth-revised-pair{grid-template-columns:1fr;gap:20px}.youth-original .youth-image{max-width:180px}.youth-image img{height:auto;max-height:350px}.youth-restart h3{font-size:29px}}
+@media print{.youth-restart-inner{width:100%}.youth-comparison figure{break-inside:avoid}.youth-restart .preview-reveal{opacity:1!important;transform:none!important}}
+.export-mode .youth-restart .preview-reveal{opacity:1!important;transform:none!important}
+.youth-restart-summary>p+p{margin-top:12px}
+.youth-restart{position:relative;isolation:isolate}
+.youth-restart::before{content:'';position:absolute;inset:36px 0 auto;height:clamp(260px,38vw,540px);z-index:-1;pointer-events:none;background:url('assets/youth-media/02-graduation-gift/graduation-gift-promotion-cover-2023.png.webp') left top/100% auto no-repeat;opacity:.16;mask-image:linear-gradient(155deg,#000 0%,rgba(0,0,0,.38) 23%,rgba(0,0,0,.08) 43%,transparent 60%);-webkit-mask-image:linear-gradient(155deg,#000 0%,rgba(0,0,0,.38) 23%,rgba(0,0,0,.08) 43%,transparent 60%)}
+@media(max-width:560px){.youth-restart::before{top:28px;background-size:auto 260px;opacity:.12}}
+
+.youth-gift-invitation{margin-top:32px;padding-top:22px;border-top:1px solid var(--line)}
+.youth-gift-heading{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:28px;align-items:start}
+.youth-gift-heading h4{max-width:11em;font:650 clamp(23px,2.3vw,30px)/1.5 var(--serif);text-wrap:balance}
+.youth-gift-copy{max-width:43em}.youth-gift-copy p{font:14px/1.8 var(--sans);text-wrap:pretty}.youth-gift-copy p+p{margin-top:10px}.youth-gift-copy strong{font-weight:600}
+.youth-gift-layout{width:100%;margin:22px 0 0}
+.youth-gift-layout figure{margin:0;min-width:0}
+.youth-gift-image{display:block;width:100%;padding:0;border:0;background:transparent;cursor:zoom-in}
+.youth-gift-image img{display:block;width:100%;height:auto;object-fit:contain}
+.youth-gift-primary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start}
+.youth-gift-primary .youth-gift-image{height:180px;display:flex;align-items:center;justify-content:center}
+
+.youth-gift-primary .youth-gift-image img{width:auto;height:auto;max-width:100%;max-height:100%;object-position:center}
+.youth-gift-layout figcaption{display:block;margin:8px 0 0;font:11px/1.7 var(--sans);color:var(--muted);letter-spacing:0}
+.youth-gift-materials{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;align-items:start;margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}
+.youth-gift-materials .youth-gift-image{height:120px;display:flex;justify-content:center;align-items:center}
+.youth-gift-materials .youth-gift-image img{width:auto;max-width:100%;height:auto;max-height:100%;object-fit:contain}
+.youth-gift-materials .youth-gift-stamp img{max-height:85px}
+@media(max-width:800px){.youth-gift-heading{grid-template-columns:1fr;gap:12px}.youth-gift-heading h4{max-width:none}.youth-gift-copy p{font-size:13px}.youth-gift-materials{gap:12px}.youth-gift-materials .youth-gift-image{height:105px}}
+@media(max-width:560px){.youth-gift-primary{grid-template-columns:1fr;gap:18px}.youth-gift-primary .youth-gift-image{height:170px}.youth-gift-materials{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 12px}.youth-gift-materials .youth-gift-checklist{grid-column:1/-1}.youth-gift-materials .youth-gift-checklist .youth-gift-image{height:180px}.youth-gift-materials .youth-gift-checklist img{margin-inline:auto}.youth-gift-materials .youth-gift-stamp .youth-gift-image{height:105px}.youth-gift-invitation{margin-top:26px}}
+@media print{.youth-gift-layout figure,.youth-gift-materials{break-inside:avoid}}
+
+
+
+.youth-gift-layout figcaption{text-align:center}

@@ -21,3 +21,11 @@
 Vercel 使用仓库根目录中的 `vercel.json`，将 GitHub 的 `main` 分支设为 Production Branch。之后提交到 main 会自动构建并更新同一个项目域名。分享项目的固定生产域名，不分享每次部署生成的预览地址。后续可以在项目 Settings → Domains 中绑定独立域名。
 
 `assets/fonts/editorial/web/` 为网页文字的 WOFF2 字体子集，原字体授权见同目录上级的 OFL 文件。大幅新增文案时应重新生成字体子集，避免新增汉字回退到系统字体。
+
+## 当前公开站点：GitHub Pages
+
+固定网址：https://435424483-ai.github.io/wang-zhiyun-portfolio/new/ 。根网址也会自动进入新版。Vercel 尚未关联，当前使用 GitHub Pages 发布 main 分支。
+
+后续更新：修改 preview-soft-cover.html 及相关资源，安装依赖后执行 npm run publish:pages，提交并推送 main；页面内容更新，网址不变。new 文件夹是生成结果，不要直接编辑。
+
+独立域名以后可在仓库 Settings → Pages → Custom domain 中绑定；目前无需购买。

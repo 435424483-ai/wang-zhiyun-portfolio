@@ -2,6 +2,11 @@
   "name": "wang-zhiyun-portfolio",
   "version": "1.0.0",
   "private": true,
-  "scripts": { "build": "node tools/build-production.cjs" },
-  "dependencies": { "sharp": "0.35.4" }
+  "scripts": {
+    "build": "node tools/build-production.cjs",
+    "publish:pages": "node tools/publish-pages.cjs"
+  },
+  "dependencies": {
+    "sharp": "0.35.4"
+  }
 }

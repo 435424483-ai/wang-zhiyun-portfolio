@@ -23,10 +23,10 @@
   history.pushState(null,'',a.getAttribute('href'));target.scrollIntoView({behavior:reduced.matches?'instant':'smooth',block:'start'});
   target.setAttribute('tabindex','-1');target.focus({preventScroll:true});
  }));
- const ids=['home','profile','work','people-daily','people-daily-case','people-daily-posters','people-daily-series','gulangyu','gulangyu-context','museum','museum-overview','museum-boards','museum-game','museum-collection','contact'];
+ const ids=['home','profile','work','people-daily','people-daily-case','people-daily-posters','people-daily-series','gulangyu','gulangyu-context','gulangyu-development','gulangyu-ai','gulangyu-products','museum','museum-overview','museum-boards','museum-game','museum-collection','youth-media','youth-media-restart','youth-editorial','youth-media-memoir','youth-they-say','youth-expectations','youth-hand-drawn','youth-calendar-restart','youth-gift-invitation','youth-delivery','youth-team-development','youth-experience-sharing','party-branch','party-script','party-comics','mazoo','mazoo-overview','mazoo-character','mazoo-content','mazoo-products','contact'];
  const links=[...panel.querySelectorAll('a[href^="#"]')];let scheduled=false;
- function update(){scheduled=false;let current='home';for(const id of ids){if(document.getElementById(id).getBoundingClientRect().top<=innerHeight*.32)current=id}
-  const parent=/^(people-daily|gulangyu|museum)/.test(current)?'work':current;
+ function update(){scheduled=false;let current='home';for(const id of ids){if(document.getElementById(id)?.getBoundingClientRect().top<=innerHeight*.32)current=id}
+  const parent=/^(people-daily|gulangyu|museum|youth|party|mazoo)/.test(current)?'work':current;
   links.forEach(a=>{const id=a.hash.slice(1),active=id===current||(a.classList.contains('index-primary')&&id===parent);if(active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')});
   const height=document.documentElement.scrollHeight-innerHeight,p=height>0?Math.min(1,Math.max(0,scrollY/height)):0;
   document.querySelector('.reading-track span').style.transform=`scaleY(${p})`;document.querySelector('.rail-progress').textContent=String(Math.round(p*100)).padStart(2,'0')+'%';
@@ -35,3 +35,5 @@
  addEventListener('scroll',queue,{passive:true});addEventListener('resize',queue);addEventListener('load',queue);new ResizeObserver(queue).observe(main);
  render();update();
 })();
+
+

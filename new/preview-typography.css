@@ -1,7 +1,7 @@
 /* Five semantic levels; OFL fonts are self-hosted with their license texts. */
-@font-face{font-family:"Portfolio Serif";src:url("assets/fonts/editorial/noto-serif-sc.ttf") format("truetype");font-weight:100 900;font-display:swap}
-@font-face{font-family:"Portfolio Sans";src:url("assets/fonts/editorial/noto-sans-sc.ttf") format("truetype");font-weight:100 900;font-display:swap}
-@font-face{font-family:"Portfolio WenKai";src:url("assets/fonts/editorial/wenkai.ttf") format("truetype");font-weight:400;font-display:swap}
+@font-face{font-family:"Portfolio Serif";src:url("assets/fonts/editorial/web/noto-serif-sc.woff2") format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Portfolio Sans";src:url("assets/fonts/editorial/web/noto-sans-sc.woff2") format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Portfolio WenKai";src:url("assets/fonts/editorial/web/wenkai.woff2") format("woff2");font-weight:400;font-display:swap}
 :root{--serif:"Portfolio Serif",serif;--sans:"Portfolio Sans",sans-serif;--display-font:var(--serif);--lead-font:var(--serif);--lead-weight:500;--display-weight:900}
 body[data-font="book"]{--lead-font:"Portfolio WenKai",var(--serif);--lead-weight:400}
 body[data-font="modern"]{--display-font:var(--sans);--display-weight:800}

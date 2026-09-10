@@ -152,7 +152,7 @@
       targets.set(legacyId, el);
 
       const cfg = changes[stableId] || (peopleOpening?.contains(el) ? null : changes[legacyId]);
-      if (cfg) apply(el, cfg);
+      if (cfg && !el.closest('[data-content-locked]')) apply(el, cfg);
     });
 
     duplicates.forEach(item => {

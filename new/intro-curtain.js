@@ -2,6 +2,9 @@
  const overlay=document.querySelector('.intro-runway'),curtain=overlay.querySelector('.intro-curtain'),type=overlay.querySelector('.intro-composition');
  const main=document.querySelector('main'),shell=document.querySelector('.portfolio-shell'),reduced=matchMedia('(prefers-reduced-motion:reduce)');
  const params=new URLSearchParams(location.search),replay=params.get('intro')==='1';
+ const orientation=matchMedia('(orientation:portrait)');
+ // A rotation changes the camera's travel distance; land cleanly on the homepage.
+ orientation.addEventListener('change',finish,{once:true});
  if(replay)overlay.style.display='block';
  const previousOverflow=document.body.style.overflow;let done=false,deadline;const animations=[];
  const svg=type.querySelector('.intro-connections'),threads=[...svg.querySelectorAll('.intro-thread')],nodes=[...svg.querySelectorAll('.intro-node')];
@@ -16,7 +19,7 @@
   });
  }
  const observer=new ResizeObserver(layoutConnections);observer.observe(type);layoutConnections();
- function finish(){if(done)return;done=true;clearTimeout(deadline);observer.disconnect();animations.forEach(a=>a.cancel());const focusWasInside=overlay.contains(document.activeElement);overlay.remove();document.body.style.overflow=previousOverflow;shell.inert=false;main.inert=!document.querySelector('.index-backdrop').hidden;if(focusWasInside){const home=document.querySelector('#home');home.tabIndex=-1;home.focus({preventScroll:true})}reduced.removeEventListener('change',finish);removeEventListener('keydown',escape);removeEventListener('pagehide',finish)}
+ function finish(){if(done)return;done=true;clearTimeout(deadline);observer.disconnect();orientation.removeEventListener('change',finish);animations.forEach(a=>a.cancel());const focusWasInside=overlay.contains(document.activeElement);overlay.remove();document.body.style.overflow=previousOverflow;shell.inert=false;main.inert=!document.querySelector('.index-backdrop').hidden;if(focusWasInside){const home=document.querySelector('#home');home.tabIndex=-1;home.focus({preventScroll:true})}reduced.removeEventListener('change',finish);removeEventListener('keydown',escape);removeEventListener('pagehide',finish)}
  function escape(e){if(e.key==='Escape')finish()}
  if(params.has('export')||(!replay&&(reduced.matches||(location.hash&&location.hash!=='#home')))){finish();return}
  window.scrollTo({top:0,left:0,behavior:'instant'});
@@ -69,3 +72,4 @@
  try{await Promise.all([departure.finished,handoffEnd.finished]);finish()}catch{/* Skip has already cleaned up. */}
  })();
 })();
+

@@ -4,7 +4,7 @@
   if(exportMode)document.body.classList.add('export-mode',`export-${exportMode}`);
   const reveal=selector=>document.querySelectorAll(selector).forEach(el=>el.classList.add('preview-reveal'));
 
-  reveal('.people-daily-opening .project-meta,.people-daily-opening h2,.people-daily-overview,.people-daily-case .approved-heading,.people-daily-sources,.people-daily-translation,.people-daily-final,.people-daily-posters .section-heading,.people-daily-series .section-heading,.series-switcher,.gulangyu-opening [data-gy-open],.gulangyu-opening-rule,.venue-context-heading,.venue-context-overview,.venue-group,.development-heading,.development-overview,.development-venue,.development-result,.museum-opening .project-meta,.museum-opening h2,.project-summary,.core>.section-heading,.approved-heading,.draft-row,.board-main,.board-side,.game-layout>div,.collection>.section-heading');
+  reveal('.people-daily-opening .project-meta,.people-daily-opening h2,.people-daily-overview,.people-daily-case .approved-heading,.people-daily-sources,.people-daily-translation,.people-daily-final,.people-daily-posters .section-heading,.people-daily-series .section-heading,.series-switcher,.gulangyu-opening [data-gy-open],.gulangyu-opening-rule,.venue-context-heading,.venue-context-overview,.venue-group,.foundation-heading,.foundation-summary,.foundation-venue,.vd-heading,.vd-summary,.vd-group,.ai-heading,.ai-workflow,.ai-applications,.pa-heading,.pa-track,.museum-opening .project-meta,.museum-opening h2,.project-summary,.core>.section-heading,.approved-heading,.draft-row,.board-main,.board-side,.game-layout>div,.collection>.section-heading');
 
   document.querySelectorAll('.route-cards>img').forEach((front,index)=>{
     const button=document.createElement('button');
@@ -13,7 +13,7 @@
     const inner=document.createElement('span');inner.className='preview-route-card-inner';
     const frontFace=document.createElement('span');frontFace.className='preview-route-card-face preview-route-card-front';
     const backFace=document.createElement('span');backFace.className='preview-route-card-face preview-route-card-back';
-    const back=document.createElement('img');back.src='assets/d_museum/museum_game_route_back.png';back.alt=`路线手卡背面 ${index+1}`;back.loading='lazy';
+    const back=document.createElement('img');back.src='assets/d_museum/museum_game_route_back.png.webp';back.alt=`路线手卡背面 ${index+1}`;back.loading='lazy';
     front.replaceWith(button);frontFace.append(front);backFace.append(back);inner.append(frontFace,backFace);button.append(inner);
     button.addEventListener('click',()=>{const flipped=button.classList.toggle('is-flipped');button.setAttribute('aria-pressed',String(flipped))});
   });
@@ -42,3 +42,5 @@
   }),{threshold:.08,rootMargin:'0px 0px -7%'});
   targets.forEach(el=>observer.observe(el));
 })();
+
+

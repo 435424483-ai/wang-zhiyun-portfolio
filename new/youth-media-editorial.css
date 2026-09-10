@@ -1,0 +1,23 @@
+
+.youth-editorial{padding-top:18px;padding-bottom:32px;border-top:1px solid var(--line)}
+.youth-editorial h3{font:700 clamp(26px,2.6vw,36px)/1.45 var(--serif)}
+.youth-editorial-intro{display:block}
+.youth-editorial-intro .youth-editorial-introduction{max-width:40em;margin:12px 0 0;font:16px/1.78 var(--sans);color:var(--ink);text-wrap:pretty}
+.youth-editorial-introduction strong{font-weight:600}
+.youth-editorial-intro + .youth-editorial-main{margin-top:32px}
+.youth-editorial-main{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.6fr);gap:28px;margin-top:22px;align-items:start}
+.youth-editorial h4{margin:0;font:600 22px/1.5 var(--serif);text-wrap:pretty}
+.youth-editorial-story p,.youth-editorial-process>p{font:14px/1.78 var(--sans);margin:0;text-wrap:pretty}
+.youth-editorial-story .youth-editorial-lead{font:550 16px/1.75 var(--sans);margin:12px 0}
+.youth-editorial-story .youth-editorial-scale{font:11px/1.8 var(--sans);color:var(--muted);margin-top:12px}
+.youth-editorial-story .youth-annual-cover{width:100%;max-width:340px;margin:20px 0 0}
+.youth-editorial-art{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
+.youth-editorial figure{margin:0;min-width:0}.youth-editorial-image{display:block;width:100%;padding:0;border:0;background:transparent;cursor:zoom-in}.youth-editorial img{display:block;width:100%;height:auto}
+.youth-editorial figcaption{margin-top:7px;font:11px/1.8 var(--sans);color:var(--muted)}
+.youth-editorial-process{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:28px;border-top:1px solid var(--line);padding-top:18px;margin-top:24px;align-items:start}.youth-editorial-process strong{font-weight:600}
+@media(max-width:800px){.youth-editorial-main{grid-template-columns:1fr;gap:20px}.youth-editorial-story{max-width:42em}.youth-editorial-process{grid-template-columns:1fr;gap:16px}}
+@media(max-width:560px){.youth-editorial-art{grid-template-columns:1fr;gap:18px}.youth-editorial h4{font-size:21px}}
+@media(max-width:600px){.youth-editorial-intro + .youth-editorial-main{margin-top:26px}}
+@media print{.youth-editorial figure{break-inside:avoid}}
+
+.youth-editorial-wrap{background:var(--paper);color:var(--ink);padding-top:36px}.youth-editorial .chapter-label{font-size:10px;margin-bottom:14px;color:var(--muted)}

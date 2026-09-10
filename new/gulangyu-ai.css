@@ -1,0 +1,32 @@
+.ai-design{--gy-accent:#873f38;background:var(--paper);color:var(--ink);padding-block:36px 40px}
+.ai-heading{display:grid;grid-template-columns:.7fr 2.3fr;gap:24px;align-items:baseline;border-top:1px solid var(--line);padding-top:20px}
+.ai-heading .chapter-label{color:var(--gy-accent);white-space:normal}
+.ai-heading h3{font:800 clamp(30px,3.5vw,52px)/1.4 var(--serif);letter-spacing:-.025em}.ai-heading h3 span{display:inline-block}
+.ai-subtitle{font:500 clamp(16px,1.5vw,20px)/1.8 var(--serif);margin:16px 0 8px;text-wrap:pretty}
+.ai-summary{max-width:68em;font:14px/1.9 var(--sans);text-wrap:pretty}
+.ai-workflow,.ai-applications{margin-top:24px;border-top:1px solid var(--line);padding-top:16px}
+.ai-design h4{font:700 23px/1.6 var(--serif)}
+.ai-stages{display:grid;grid-template-columns:1fr .85fr 1.25fr;gap:22px;margin-top:14px;align-items:start}
+.ai-stage{min-width:0}.ai-stage h5{font:500 14px/1.7 var(--sans);margin-bottom:12px}.ai-stage h5 span{color:var(--gy-accent);font:italic 12px Georgia,serif;margin-right:10px}
+.ai-image{display:flex;align-items:center;justify-content:center;width:100%;height:100%;padding:7px;border:0;background:#f0ede6;cursor:zoom-in}
+.ai-image img{width:100%;height:100%;object-fit:contain}.ai-design figure{min-width:0;margin:0}
+.ai-design figcaption{font:11px/1.7 var(--sans);color:var(--muted);margin-top:6px;text-wrap:pretty}
+.ai-library{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.ai-library .ai-image{height:68px;background:transparent;padding:0}
+.ai-library figcaption{font-size:10px;text-align:center;margin-top:2px}
+.ai-plants{margin-top:10px!important}.ai-plants .ai-image{height:66px;background:transparent;padding:0}
+.ai-process{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.ai-process .ai-image{height:145px;padding:0;background:transparent}.ai-process img{max-height:145px}
+.ai-product .ai-image{height:246px}
+.ai-application-heading{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.ai-tabs{display:flex;gap:18px}.ai-tabs button{border:0;border-bottom:1px solid transparent;padding:7px 1px;color:var(--muted);background:none;font:13px/1.6 var(--sans);cursor:pointer}
+.ai-tabs button[aria-selected=true]{color:var(--gy-accent);border-color:var(--gy-accent)}
+.ai-application-copy{font:13px/1.9 var(--sans);margin:9px 0 15px;max-width:66em;text-wrap:pretty}
+.ai-material-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:850px;margin-inline:auto}
+#ai-panel-metal .ai-material-grid{grid-template-columns:repeat(3,minmax(0,1fr));max-width:none}
+.ai-material-grid .ai-image{height:190px}.ai-panel{min-height:245px}.ai-panel[hidden]{display:none}
+.ai-export-label{display:none}.ai-tools{font:10px/1.8 var(--sans);color:var(--muted);border-top:1px solid var(--line);padding-top:12px;margin-top:18px}
+@media(max-width:1100px){.ai-heading{grid-template-columns:1fr;gap:10px}.ai-stages{gap:14px}}
+@media(max-width:800px){.ai-stages{grid-template-columns:1fr 1fr}.ai-product{grid-column:1/-1}.ai-product .ai-image{height:200px}.ai-material-grid .ai-image{height:150px}.ai-panel{min-height:225px}}
+@media(max-width:560px){.ai-design{padding-block:28px}.ai-stages{grid-template-columns:1fr}.ai-product{grid-column:auto}.ai-library{grid-template-columns:repeat(4,minmax(0,1fr))}.ai-library .ai-image{height:62px}.ai-plants .ai-image{height:70px}.ai-process{max-width:340px}.ai-process .ai-image{height:110px}.ai-product .ai-image{height:190px}.ai-summary{font-size:13px}.ai-material-grid{gap:8px}.ai-material-grid .ai-image{height:130px}#ai-panel-metal .ai-material-grid{grid-template-columns:1fr 1fr}#ai-panel-metal figure:first-child{grid-column:1/-1}#ai-panel-metal figure:first-child .ai-image{height:115px}.ai-panel{min-height:0}.ai-tools{font-size:9px}}
+@media print{.ai-tabs{display:none}.ai-panel[hidden]{display:block!important}.ai-panel{margin-top:18px;break-inside:avoid}.ai-export-label{display:block;font:600 16px/1.8 var(--serif);margin-bottom:10px}.ai-design .preview-reveal{opacity:1!important;transform:none!important}.ai-stage,.ai-material-grid{break-inside:avoid}}
+.export-mode .ai-tabs{display:none}.export-mode .ai-panel[hidden]{display:block}.export-mode .ai-panel{margin-top:18px}.export-mode .ai-export-label{display:block;font:600 16px/1.8 var(--serif);margin-bottom:10px}
+.ai-library-caption{font:11px/1.7 var(--sans);color:var(--muted);margin-top:8px}
