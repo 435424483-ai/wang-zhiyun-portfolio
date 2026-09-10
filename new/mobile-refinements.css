@@ -1,0 +1,13 @@
+/* Local mobile readability and explicit material choices. */
+.people-daily-final .pd-final-caption{display:block;font:400 12px/1.7 var(--sans);letter-spacing:0;margin-top:10px;color:var(--muted)}
+.ai-material-choices{display:flex;flex-direction:column;gap:6px}
+.ai-choice-hint{font:11px/1.5 var(--sans);color:var(--muted)}
+.ai-tabs{gap:8px}
+.ai-tabs button{min-width:66px;min-height:40px;padding:8px 14px;border:1px solid var(--line);font-weight:500}
+.ai-tabs button[aria-selected=true]{border-color:var(--gy-accent);background:var(--gy-accent);color:var(--paper)}
+.ai-tabs button:focus-visible{outline:2px solid var(--gy-accent);outline-offset:3px}
+.intro-loading{position:absolute;inset:0;z-index:5;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:#716758;font:13px/1.6 Arial,"Microsoft YaHei",sans-serif;pointer-events:none}
+.intro-loading-track{width:120px;height:2px;background:#b6ae9f55}.intro-loading-track i{display:block;width:var(--load-progress,0%);height:100%;background:#987950;transition:width 180ms ease}
+.intro-ready .intro-loading{display:none}
+@media(max-width:700px){.ai-material-choices{width:100%}.ai-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%}.ai-tabs button{min-width:0;min-height:44px;padding:9px 6px;font-size:14px}.people-daily-final .pd-final-caption{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.intro-loading-track i{transition:none}}

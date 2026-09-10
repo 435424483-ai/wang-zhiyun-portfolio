@@ -26,7 +26,13 @@
  document.body.style.overflow='hidden';main.inert=true;shell.inert=true;
  overlay.querySelector('button').addEventListener('click',finish);addEventListener('keydown',escape);addEventListener('pagehide',finish);reduced.addEventListener('change',finish);
  deadline=setTimeout(finish,7200);
- (async()=>{await Promise.all([document.fonts.ready,Promise.race([Promise.all([...overlay.querySelectorAll('img')].map(img=>img.decode().catch(()=>{}))),new Promise(r=>setTimeout(r,1500))])]);if(done)return;
+ (async()=>{
+ const loading=overlay.querySelector('.intro-loading');
+ const images=[...overlay.querySelectorAll('img')];let loaded=0;
+ const advance=()=>{loaded++;loading?.style.setProperty('--load-progress',`${Math.round(loaded/(images.length+1)*100)}%`)};
+ const fontReady=Promise.race([document.fonts.ready,new Promise(r=>setTimeout(r,1000))]).then(advance);
+ const imagesReady=Promise.race([Promise.all(images.map(img=>img.decode().catch(()=>{}).then(advance))),new Promise(r=>setTimeout(r,1500))]);
+ await Promise.all([fontReady,imagesReady]);if(done)return;
  clearTimeout(deadline);deadline=setTimeout(finish,5500);layoutConnections();
  type.querySelectorAll('.intro-type>span').forEach((line,i)=>animations.push(line.animate([{opacity:0,transform:'translateY(7px)'},{opacity:1,transform:'translateY(0)'}],{duration:1250,delay:i*140,easing:'cubic-bezier(.22,1,.36,1)',fill:'both'})));
  overlay.querySelectorAll('.intro-topline,.intro-baseline').forEach(el=>animations.push(el.animate([{opacity:0},{opacity:1}],{duration:900,easing:'ease-out',fill:'both'})));
